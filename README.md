@@ -16,9 +16,9 @@ For a quick insight into the apps structure we've made this quick [prototype](ht
 
 ## Team members
 
-Christopher Spiegel, cs304
-Nils Klegraf Gracia, nk137
-Nikita Zaripov, nz018
+Christopher Spiegel, cs304 \
+Nils Klegraf Gracia, nk137 \
+Nikita Zaripov, nz018 
 
 
 
