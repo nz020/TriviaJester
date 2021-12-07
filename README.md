@@ -8,9 +8,16 @@
 ## App Idea
 
 We want to develop a streak based Quiz App, using the [Open Trivia API](https://opentdb.com/api_config.php).
-It will feauture statistics, where you can check your longest streak of correct answers and your best category.
+The app will feature multiple quiz categories and a statistics page where you can see data like your fastest quiz rundown, or longest streak of correct answers. 
 
-For a better understanding we have made a [prototype](https://imgur.com/a/mpa7dnC).
+
+For a quick insight into the apps structure we've made this quick [prototype](https://imgur.com/a/mpa7dnC).
+
+## Team members
+
+Christopher Spiegel, cs304
+Nils Klegraf Gracia, nk137
+Nikita Zaripov, nz018
 
 
 
