@@ -9,7 +9,8 @@ import UIKit
 
 class QuestionScreenViewController: UIViewController {
     
-    let url = "https://opentdb.com/api.php?amount=1";
+    let url = "https://opentdb.com/api.php?amount=1&category=";
+    let selectedCategory = "9" // test
     
     struct Response: Codable {
         let response_code: Int
@@ -35,11 +36,11 @@ class QuestionScreenViewController: UIViewController {
     
     func sendApiRequest(url: String) {
         
-        guard let url = URL(string: url) else {
+        guard let url = URL(string: url + selectedCategory) else {
             print("Error: cannot create URL")
             return
         }
-        print(url)
+        
         //let urlRequest = URLRequest(url: url)
         let session = URLSession.shared
         
