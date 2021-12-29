@@ -18,17 +18,17 @@ class QuestionScreenViewController: UIViewController {
     
     var overlay : UIView?
     
-    
-    let url: String = "https://opentdb.com/api.php?amount=1&type=multiple&category=";
+    let url: String = "https://opentdb.com/api.php?amount=1&type=multiple&encode=url3986&category=";
     let selectedCategory: String = "9" // test
-    let currentQuestion: Int = 0;
+    var currentQuestion: Int = 0;
+    var questions: [Question] = [Question]()
     
     struct Response: Codable {
         let response_code: Int
-        let results: [QuestionDetails]
+        let results: [Question]
     }
     
-    struct QuestionDetails: Codable {
+    struct Question: Codable {
         let category: String
         let type: String
         let difficulty: String
@@ -59,24 +59,22 @@ class QuestionScreenViewController: UIViewController {
         view.addSubview(overlay!)
 
         //API Call
-        
-        sendApiRequest(url: url)
-        
+        getQuestion(url: url)
     }
     
-    func sendApiRequest(url: String) {
+    func getQuestion(url: String) {
         
         guard let url = URL(string: url + selectedCategory) else {
             print("Error: cannot create URL")
             return
         }
         
-        //let urlRequest = URLRequest(url: url)
+        let urlRequest = URLRequest(url: url)
         let session = URLSession.shared
         
         
-        let task = session.dataTask(with: url, completionHandler: { data,response,error in
-            
+        let task = session.dataTask(with: urlRequest, completionHandler: { data,response,error in
+         
             guard let data = data, error == nil else {
                 print("error when fetching data")
                 return
@@ -97,15 +95,21 @@ class QuestionScreenViewController: UIViewController {
             print (json.results)
             
             DispatchQueue.main.async {
-                self.questionLabel.text = json.results[self.currentQuestion].question
-                self.difficultyLabel.text = json.results[self.currentQuestion].difficulty
-                self.randomizePositionOfCorrectAnswer(correctAnswer: json.results[self.currentQuestion].correct_answer, wrongAnswers: json.results[self.currentQuestion].incorrect_answers)
-                self.overlay?.removeFromSuperview()
+                self.questions = json.results
+                self.updateView()
+                self.currentQuestion += 1
             }
 
         })
         task.resume()
-        
+    }
+    
+    func updateView() {
+        questionLabel.text = questions[0].question.removingPercentEncoding
+        difficultyLabel.text = questions[0].difficulty.removingPercentEncoding
+        randomizePositionOfCorrectAnswer(correctAnswer: questions[0].correct_answer, wrongAnswers: questions[0].incorrect_answers)
+        self.title = "Streak: \(currentQuestion)"
+        overlay?.removeFromSuperview()
     }
     
     func randomizePositionOfCorrectAnswer(correctAnswer: String, wrongAnswers: [String]) {
@@ -113,13 +117,17 @@ class QuestionScreenViewController: UIViewController {
         var answersArray: [String] = [correctAnswer] + wrongAnswers;
         answersArray.shuffle()
         
-        self.firstAnswer.setTitle(answersArray[0], for: .normal)
-        self.secondAnswer.setTitle(answersArray[1], for: .normal)
-        self.thirdAnswer.setTitle(answersArray[2], for: .normal)
-        self.fourthAnswer.setTitle(answersArray[3], for: .normal)
+        self.firstAnswer.setTitle(answersArray[0].removingPercentEncoding, for: .normal)
+        self.secondAnswer.setTitle(answersArray[1].removingPercentEncoding, for: .normal)
+        self.thirdAnswer.setTitle(answersArray[2].removingPercentEncoding, for: .normal)
+        self.fourthAnswer.setTitle(answersArray[3].removingPercentEncoding, for: .normal)
     }
     
-
+    @IBAction func firstAnswerOnClick(_ sender: UIButton) {
+        
+        getQuestion(url: url)
+    }
+    
     /*
     // MARK: - Navigation
 

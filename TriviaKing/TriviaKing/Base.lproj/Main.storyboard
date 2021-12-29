@@ -114,7 +114,7 @@
             </objects>
             <point key="canvasLocation" x="1740" y="69"/>
         </scene>
-        <!--Question Screen View Controller-->
+        <!--Streak: 0-->
         <scene sceneID="omK-Wv-gmm">
             <objects>
                 <viewController id="Sny-Yx-Lw7" customClass="QuestionScreenViewController" customModule="TriviaKing" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,12 +122,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Streak: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPu-lm-UDX">
-                                <rect key="frame" x="325" y="44" width="69" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiL-Se-YS8">
                                 <rect key="frame" x="72" y="118" width="270" height="142"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -138,6 +132,9 @@
                                 <rect key="frame" x="20" y="539" width="374" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Answer 1"/>
+                                <connections>
+                                    <action selector="firstAnswerOnClick:" destination="Sny-Yx-Lw7" eventType="touchUpInside" id="O4V-Rj-tYH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3R-Em-R1H">
                                 <rect key="frame" x="20" y="288" width="68" height="21"/>
@@ -177,7 +174,6 @@
                             <constraint firstItem="o3R-Em-R1H" firstAttribute="top" secondItem="MMP-at-seg" secondAttribute="top" constant="200" id="SGF-Uk-B5h"/>
                             <constraint firstItem="MMP-at-seg" firstAttribute="bottom" secondItem="GIX-LC-EqM" secondAttribute="bottom" constant="79" id="SLO-Hp-1O4"/>
                             <constraint firstItem="Yfk-aA-UT1" firstAttribute="top" secondItem="Yoa-dL-Tco" secondAttribute="bottom" constant="40" id="Vib-js-k8R"/>
-                            <constraint firstItem="Yoa-dL-Tco" firstAttribute="trailing" secondItem="hPu-lm-UDX" secondAttribute="trailing" id="Vo1-nL-GRm"/>
                             <constraint firstItem="kyI-YT-T5q" firstAttribute="leading" secondItem="GIX-LC-EqM" secondAttribute="leading" id="XL6-6w-BGd"/>
                             <constraint firstItem="uiL-Se-YS8" firstAttribute="leading" secondItem="MMP-at-seg" secondAttribute="leading" constant="72" id="XW3-9K-6fg"/>
                             <constraint firstItem="iJ0-IV-fkL" firstAttribute="top" secondItem="o3R-Em-R1H" secondAttribute="bottom" constant="20" id="bCy-fm-0EB"/>
@@ -193,7 +189,7 @@
                             <constraint firstItem="Yfk-aA-UT1" firstAttribute="leading" secondItem="kyI-YT-T5q" secondAttribute="leading" id="uUB-4u-JVN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="L35-Fs-Ow9"/>
+                    <navigationItem key="navigationItem" title="Streak: 0" id="L35-Fs-Ow9"/>
                     <connections>
                         <outlet property="difficultyLabel" destination="iJ0-IV-fkL" id="xsv-dN-nnN"/>
                         <outlet property="firstAnswer" destination="Yoa-dL-Tco" id="bJY-Pi-Mn4"/>
