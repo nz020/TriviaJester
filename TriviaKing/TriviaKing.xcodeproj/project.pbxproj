@@ -17,6 +17,7 @@
 		118CAD6E276FD506002D4223 /* CategoryScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118CAD6D276FD506002D4223 /* CategoryScreenViewController.swift */; };
 		118CAD70276FD53C002D4223 /* QuestionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118CAD6F276FD53C002D4223 /* QuestionScreenViewController.swift */; };
 		118CAD72276FD56F002D4223 /* StatisticScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118CAD71276FD56F002D4223 /* StatisticScreenViewController.swift */; };
+		7545F245277CA72C00563A98 /* LocalStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7545F244277CA72C00563A98 /* LocalStorageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		118CAD6D276FD506002D4223 /* CategoryScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryScreenViewController.swift; sourceTree = "<group>"; };
 		118CAD6F276FD53C002D4223 /* QuestionScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionScreenViewController.swift; sourceTree = "<group>"; };
 		118CAD71276FD56F002D4223 /* StatisticScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticScreenViewController.swift; sourceTree = "<group>"; };
+		7545F244277CA72C00563A98 /* LocalStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				118CAD58276FCBBA002D4223 /* SceneDelegate.swift */,
 				118CAD5A276FCBBA002D4223 /* MainScreenViewController.swift */,
 				118CAD5C276FCBBA002D4223 /* Main.storyboard */,
+				7545F244277CA72C00563A98 /* LocalStorageController.swift */,
 				118CAD71276FD56F002D4223 /* StatisticScreenViewController.swift */,
 				118CAD6F276FD53C002D4223 /* QuestionScreenViewController.swift */,
 				118CAD6D276FD506002D4223 /* CategoryScreenViewController.swift */,
@@ -153,6 +156,7 @@
 				118CAD70276FD53C002D4223 /* QuestionScreenViewController.swift in Sources */,
 				118CAD5B276FCBBA002D4223 /* MainScreenViewController.swift in Sources */,
 				118CAD72276FD56F002D4223 /* StatisticScreenViewController.swift in Sources */,
+				7545F245277CA72C00563A98 /* LocalStorageController.swift in Sources */,
 				118CAD57276FCBBA002D4223 /* AppDelegate.swift in Sources */,
 				118CAD59276FCBBA002D4223 /* SceneDelegate.swift in Sources */,
 				118CAD61276FCBBA002D4223 /* TriviaKing.xcdatamodeld in Sources */,
