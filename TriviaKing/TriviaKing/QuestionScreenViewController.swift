@@ -20,6 +20,7 @@ class QuestionScreenViewController: UIViewController {
     
     let url: String = "https://opentdb.com/api.php?amount=1&type=multiple&encode=url3986&category=";
     let selectedCategory: String = "9" // test
+    var numberOfLives: Int = 3
     var currentQuestion: Int = 0;
     var questions: [Question] = [Question]()
     
@@ -124,8 +125,50 @@ class QuestionScreenViewController: UIViewController {
     }
     
     @IBAction func firstAnswerOnClick(_ sender: UIButton) {
+        let buttonTitle = String(sender.title(for: .normal) ?? "")
         
+        checkCorrectAnswer(givenAnswer: buttonTitle)
         getQuestion(url: url)
+    }
+    
+    @IBAction func secondAnswerOnClick(_ sender: UIButton) {
+        let buttonTitle = String(sender.title(for: .normal) ?? "")
+        
+        checkCorrectAnswer(givenAnswer: buttonTitle)
+        getQuestion(url: url)
+    }
+    
+    @IBAction func thirdAnswerOnClick(_ sender: UIButton) {
+        let buttonTitle = String(sender.title(for: .normal) ?? "")
+        
+        checkCorrectAnswer(givenAnswer: buttonTitle)
+        getQuestion(url: url)
+    }
+    
+    @IBAction func fourthAnswerOnClick(_ sender: UIButton) {
+        let buttonTitle = String(sender.title(for: .normal) ?? "")
+        
+        checkCorrectAnswer(givenAnswer: buttonTitle)
+        getQuestion(url: url)
+    }
+    
+    func checkCorrectAnswer (givenAnswer: String) {
+        let correctAnswer = questions[0].correct_answer
+        if (givenAnswer==correctAnswer) {
+            print("Correct")
+        }
+        else {
+            print("Wrong")
+            numberOfLives -= 1
+            checkGameOver()
+        }
+    }
+    
+    func checkGameOver () {
+        if (numberOfLives < 1) {
+            print("You Lost")
+            _ = navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     /*
@@ -137,6 +180,5 @@ class QuestionScreenViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
 
