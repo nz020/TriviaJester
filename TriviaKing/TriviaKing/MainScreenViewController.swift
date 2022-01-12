@@ -9,8 +9,12 @@ import UIKit
 
 class MainScreenViewController: UIViewController {
 
+    let apiInstance = OTDBAPIController.INSTANCE
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        apiInstance.requestToken()
         // Do any additional setup after loading the view.
     }
 

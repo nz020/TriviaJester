@@ -15,28 +15,14 @@ class QuestionScreenViewController: UIViewController {
     @IBOutlet weak var secondAnswer: UIButton!
     @IBOutlet weak var thirdAnswer: UIButton!
     @IBOutlet weak var fourthAnswer: UIButton!
-    
     var overlay : UIView?
+
+    let apiInstance = OTDBAPIController.INSTANCE
+    let selectedCategory: String = "9"// test
     
-    let url: String = "https://opentdb.com/api.php?amount=1&type=multiple&encode=url3986&category=";
-    let selectedCategory: String = "9" // test
     var numberOfLives: Int = 3
-    var currentQuestion: Int = 0;
+    var currentQuestion: Int = 0
     var questions: [Question] = [Question]()
-    
-    struct Response: Codable {
-        let response_code: Int
-        let results: [Question]
-    }
-    
-    struct Question: Codable {
-        let category: String
-        let type: String
-        let difficulty: String
-        let question: String
-        let correct_answer: String
-        let incorrect_answers: [String]
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,49 +46,24 @@ class QuestionScreenViewController: UIViewController {
         view.addSubview(overlay!)
 
         //API Call
-        getQuestion(url: url)
+        getQuestion()
     }
     
-    func getQuestion(url: String) {
-        
-        guard let url = URL(string: url + selectedCategory) else {
-            print("Error: cannot create URL")
-            return
-        }
-        
-        let urlRequest = URLRequest(url: url)
-        let session = URLSession.shared
-        
-        
-        let task = session.dataTask(with: urlRequest, completionHandler: { data,response,error in
-         
-            guard let data = data, error == nil else {
-                print("error when fetching data")
-                return
-            }
+    func getQuestion() {
+        apiInstance.getQuestion(category: selectedCategory) { result in
             
-            var result: Response?
-            do {
-                result = try JSONDecoder().decode(Response.self, from: data)
+            if(result?.count == 0) {
+                //Since no question got retrieved either there was an error loading the data or the player has played through all questions in the respective category. -> Throw him to the main screen.
+                _ = self.navigationController?.popToRootViewController(animated: true)
             }
-            catch {
-                print ("failed to decode data, Error: \(error)")
-            }
-            
-            guard let json = result else {
-                return
-            }
-            print (json.response_code)
-            print (json.results)
             
             DispatchQueue.main.async {
-                self.questions = json.results
+                self.questions = result!
                 self.updateView()
                 self.currentQuestion += 1
             }
-
-        })
-        task.resume()
+            
+        }
     }
     
     func updateView() {
@@ -128,28 +89,28 @@ class QuestionScreenViewController: UIViewController {
         let buttonTitle = String(sender.title(for: .normal) ?? "")
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
-        getQuestion(url: url)
+        getQuestion()
     }
     
     @IBAction func secondAnswerOnClick(_ sender: UIButton) {
         let buttonTitle = String(sender.title(for: .normal) ?? "")
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
-        getQuestion(url: url)
+        getQuestion()
     }
     
     @IBAction func thirdAnswerOnClick(_ sender: UIButton) {
         let buttonTitle = String(sender.title(for: .normal) ?? "")
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
-        getQuestion(url: url)
+        getQuestion()
     }
     
     @IBAction func fourthAnswerOnClick(_ sender: UIButton) {
         let buttonTitle = String(sender.title(for: .normal) ?? "")
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
-        getQuestion(url: url)
+        getQuestion()
     }
     
     func checkCorrectAnswer (givenAnswer: String) {
