@@ -35,37 +35,37 @@ struct LocalStorageController {
     }
     
     func getMostPlayed() -> CDCategory {
-        var mostPlayedCategory: CDCategory = CDCategory()
+        var mostPlayedCategory: CDCategory?
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "CDCategory")
         request.fetchLimit = 1
         request.sortDescriptors = [NSSortDescriptor(key: "timesPlayed", ascending: false)]
         
         do {
             let results = try context.fetch(request)
-            mostPlayedCategory = results[0] as! CDCategory
+            mostPlayedCategory = results[0] as? CDCategory
         } catch let error {
             print(error)
             print("Error fetching most played Category.")
         }
         
-        return mostPlayedCategory
+        return mostPlayedCategory!
     }
     
     func getLongestStreak() -> CDCategory {
-        var longestStreakCategory: CDCategory = CDCategory()
+        var longestStreakCategory: CDCategory?
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "CDCategory")
         request.fetchLimit = 1
         request.sortDescriptors = [NSSortDescriptor(key: "longestStreak", ascending: false)]
         
         do {
             let results = try context.fetch(request)
-            longestStreakCategory = results[0] as! CDCategory
+            longestStreakCategory = results[0] as? CDCategory
         } catch let error {
             print(error)
             print("Error fetching longest Streak.")
         }
         
-        return longestStreakCategory
+        return longestStreakCategory!
     }
     
     func getBestAnswerRatio() -> CDCategory {
@@ -140,6 +140,7 @@ struct LocalStorageController {
             
             do {
                 try context.save()
+                print("Already existing category saved.")
             } catch let error {
                 print(error)
                 print("Error saving CoreData context.")
@@ -155,11 +156,14 @@ struct LocalStorageController {
             
             do {
                 try context.save()
+                print("New Category saved.")
             } catch let error {
                 print(error)
                 print("Error saving CoreData context.")
             }
         }
+        
+        print("Something was saved")
     }
     
     

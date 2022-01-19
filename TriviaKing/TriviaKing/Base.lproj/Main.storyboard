@@ -160,13 +160,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Statistics" id="v8C-Oh-Hwo"/>
                     <connections>
-                        <outlet property="BestCat" destination="ikK-9q-wre" id="AVq-Bi-s6F"/>
-                        <outlet property="BestCatCorrect" destination="RgM-yc-hQp" id="DL7-HU-LHS"/>
-                        <outlet property="BestCatStreak" destination="MvO-ZH-FYX" id="C1D-rg-IAI"/>
-                        <outlet property="BestCatTime" destination="qYt-bP-48H" id="PaB-O1-PCM"/>
-                        <outlet property="MostPlayedCat" destination="zim-dW-QE8" id="s5P-3z-fa7"/>
-                        <outlet property="MostPlayedCatTime" destination="Lkx-e5-KCE" id="VzT-qw-h8c"/>
-                        <outlet property="TotalRounds" destination="pZ9-yh-0QA" id="KBe-S3-NLx"/>
+                        <outlet property="BestCat" destination="ikK-9q-wre" id="Ghj-z4-bWj"/>
+                        <outlet property="BestCatCorrect" destination="RgM-yc-hQp" id="VZw-5O-f5z"/>
+                        <outlet property="BestCatStreak" destination="MvO-ZH-FYX" id="YLW-Sx-XSu"/>
+                        <outlet property="BestCatTime" destination="qYt-bP-48H" id="Gju-Tj-zMg"/>
+                        <outlet property="HighestStreak" destination="dzD-Ll-fIf" id="8fB-qE-6PB"/>
+                        <outlet property="MostPlayedCat" destination="zim-dW-QE8" id="b86-lQ-jNp"/>
+                        <outlet property="MostPlayedCatTime" destination="Lkx-e5-KCE" id="1Lq-LG-VUR"/>
+                        <outlet property="TotalRounds" destination="pZ9-yh-0QA" id="Xxj-FT-cLM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAD-cD-PsW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

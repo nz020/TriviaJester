@@ -19,25 +19,29 @@ class StatisticScreenViewController: UIViewController {
     @IBOutlet weak var BestCatStreak: UILabel!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var database: LocalStorageController? = nil
-    var highestStreakCat: CDCategory = CDCategory()
+    var database: LocalStorageController?
+    var highestStreakCat: CDCategory?
     var totalRounds: Int = 0
-    var mostPlayedCat: CDCategory = CDCategory()
-    var bestCat: CDCategory = CDCategory()
+    var mostPlayedCat: CDCategory?
+    var bestCat: CDCategory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         database = LocalStorageController(delegate: appDelegate)
-        loadData()
-        setLabels()
+        
+        DispatchQueue.main.async {
+            self.loadData()
+            self.setLabels()
+            
+        }
     }
     
     func loadData() {
-        highestStreakCat = database?.getLongestStreak() ?? CDCategory()
-        totalRounds = calculateTotalRounds(categories: database?.getAllCategories() ?? [CDCategory]())
-        mostPlayedCat = database?.getMostPlayed() ?? CDCategory()
-        bestCat = database?.getBestAnswerRatio() ?? CDCategory()
+        highestStreakCat = database?.getLongestStreak()
+        totalRounds = calculateTotalRounds(categories: (database?.getAllCategories())!)
+        mostPlayedCat = database?.getMostPlayed()
+        bestCat = database?.getBestAnswerRatio()
     }
     
     func calculateTotalRounds(categories: [CDCategory]) -> Int {
@@ -49,16 +53,16 @@ class StatisticScreenViewController: UIViewController {
     }
     
     func setLabels() {
-        HighestStreak.text = String(highestStreakCat.longestStreak)
-        TotalRounds.text = String(totalRounds)
+        HighestStreak.text = "\(highestStreakCat?.name ?? ""): \(highestStreakCat?.longestStreak ?? 0)"
+        TotalRounds.text = "\(totalRounds)"
         
-        MostPlayedCat.text = mostPlayedCat.name
-        MostPlayedCatTime.text = String(mostPlayedCat.timesPlayed)
+        MostPlayedCat.text = mostPlayedCat?.name
+        MostPlayedCatTime.text = "Times played: \(mostPlayedCat?.timesPlayed ?? 0)"
         
-        BestCat.text = bestCat.name
-        BestCatTime.text = String(bestCat.timesPlayed)
-        BestCatStreak.text = String(bestCat.longestStreak)
-        BestCatCorrect.text = String(bestCat.answeredRight)
+        BestCat.text = bestCat?.name
+        BestCatTime.text = "Times Played: \(bestCat?.timesPlayed ?? 0)"
+        BestCatStreak.text = "Longest Streak: \(bestCat?.longestStreak ?? 0)"
+        BestCatCorrect.text = "Correct Answers: \(bestCat?.answeredRight ?? 0)"
     }
     
 

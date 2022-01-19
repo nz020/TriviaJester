@@ -34,6 +34,16 @@ struct OTDBAPIController {
     let URL_BY_CATEGORY = "https://opentdb.com/api.php?amount=1&type=multiple&encode=url3986&category="
     let URL_GET_TOKEN = "https://opentdb.com/api_token.php?command=request"
     static var session_token: String = ""
+    static var catDict = ["General Knowledge": "9",
+                    "Books": "10",
+                    "Film/Movies": "11",
+                    "Music": "12",
+                    "Video Games": "15",
+                    "Computers": "18",
+                    "Sports": "21",
+                    "Celebrities": "26",
+                    "Comics": "29",
+                    "Anime/Manga": "31"]
     
     func getQuestion(category: String, callback: @escaping([Question]?) -> Void) {
         

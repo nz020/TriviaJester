@@ -18,6 +18,8 @@ class QuestionScreenViewController: UIViewController {
     var overlay : UIView?
 
     let apiInstance = OTDBAPIController.INSTANCE
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var database: LocalStorageController?
     var selectedCategory: String? 
     
     var numberOfLives: Int = 3
@@ -26,6 +28,7 @@ class QuestionScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        database = LocalStorageController(delegate: appDelegate)
         
         print("Selected Category:", selectedCategory ?? "")
         
@@ -49,6 +52,13 @@ class QuestionScreenViewController: UIViewController {
 
         //API Call
         getQuestion()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        print(OTDBAPIController.catDict.someKey(forValue: selectedCategory!)!)
+        database?.saveCategory(category: OTDBAPIController.catDict.someKey(forValue: selectedCategory!)!, correctAnswers: (currentQuestion - 3 + numberOfLives), wrongAnswers: (-1 * (numberOfLives-3)), streak: currentQuestion - 3 + numberOfLives)
     }
     
     func getQuestion() {
@@ -145,3 +155,8 @@ class QuestionScreenViewController: UIViewController {
     */
 }
 
+extension Dictionary where Value: Equatable {
+    func someKey(forValue val: Value) -> Key? {
+        return first(where: { $1 == val })?.key
+    }
+}
