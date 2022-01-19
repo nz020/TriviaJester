@@ -18,6 +18,7 @@
 		118CAD70276FD53C002D4223 /* QuestionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118CAD6F276FD53C002D4223 /* QuestionScreenViewController.swift */; };
 		118CAD72276FD56F002D4223 /* StatisticScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118CAD71276FD56F002D4223 /* StatisticScreenViewController.swift */; };
 		7545F245277CA72C00563A98 /* LocalStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7545F244277CA72C00563A98 /* LocalStorageController.swift */; };
+		790965F927985C5E00B110C1 /* OTDBAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790965F827985C5E00B110C1 /* OTDBAPIController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		118CAD6F276FD53C002D4223 /* QuestionScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionScreenViewController.swift; sourceTree = "<group>"; };
 		118CAD71276FD56F002D4223 /* StatisticScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticScreenViewController.swift; sourceTree = "<group>"; };
 		7545F244277CA72C00563A98 /* LocalStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageController.swift; sourceTree = "<group>"; };
+		790965F827985C5E00B110C1 /* OTDBAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTDBAPIController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		118CAD55276FCBBA002D4223 /* TriviaKing */ = {
 			isa = PBXGroup;
 			children = (
+				790965F827985C5E00B110C1 /* OTDBAPIController.swift */,
 				118CAD56276FCBBA002D4223 /* AppDelegate.swift */,
 				118CAD58276FCBBA002D4223 /* SceneDelegate.swift */,
 				118CAD5A276FCBBA002D4223 /* MainScreenViewController.swift */,
@@ -155,6 +158,7 @@
 			files = (
 				118CAD70276FD53C002D4223 /* QuestionScreenViewController.swift in Sources */,
 				118CAD5B276FCBBA002D4223 /* MainScreenViewController.swift in Sources */,
+				790965F927985C5E00B110C1 /* OTDBAPIController.swift in Sources */,
 				118CAD72276FD56F002D4223 /* StatisticScreenViewController.swift in Sources */,
 				7545F245277CA72C00563A98 /* LocalStorageController.swift in Sources */,
 				118CAD57276FCBBA002D4223 /* AppDelegate.swift in Sources */,
