@@ -8,22 +8,76 @@
 import UIKit
 
 class CategoryScreenViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    var categories = ["General Knowledge": "9",
+                    "Books": "10",
+                    "Film/Movies": "11",
+                    "Music": "12",
+                    "Video Games": "15",
+                    "Computers": "18",
+                    "Sports": "21",
+                    "Celebrities": "26",
+                    "Comics": "29",
+                    "Anime/Manga": "31"]
+    
+    var selectedCategory: String?
+    
+    @IBOutlet weak var Category1ButtonOutlet: UIButton!
+    
+    @IBOutlet weak var Category2ButtonOutlet: UIButton!
+    
+    @IBOutlet weak var Category3ButtonOutlet: UIButton!
+    
+    @IBOutlet weak var Category4ButtonOutlet: UIButton!
+    
+    @IBAction func Category1Button(_ sender: UIButton) {
+        selectedCategory = categories[Category1ButtonOutlet.titleLabel?.text ?? ""]
+        buttonPressed()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func Category2Button(_ sender: UIButton) {
+        selectedCategory = categories[Category2ButtonOutlet.titleLabel?.text ?? ""]
+        buttonPressed()
     }
-    */
-
+    
+    @IBAction func Category3Button(_ sender: UIButton) {
+        selectedCategory = categories[Category3ButtonOutlet.titleLabel?.text ?? ""]
+        buttonPressed()
+    }
+    
+    @IBAction func Category4Button(_ sender: UIButton) {
+        selectedCategory = categories[Category4ButtonOutlet.titleLabel?.text ?? ""]
+        buttonPressed()
+    }
+    
+    func buttonPressed(){
+        self.performSegue(withIdentifier: "categorySegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! QuestionScreenViewController
+        destinationVC.selectedCategory = selectedCategory
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        var tempCategories = categories
+        
+        let randomCategory1 = tempCategories.keys.randomElement()
+        tempCategories.removeValue(forKey: randomCategory1 ?? "")
+        
+        let randomCategory2 = tempCategories.keys.randomElement()
+        tempCategories.removeValue(forKey: randomCategory2 ?? "")
+        
+        let randomCategory3 = tempCategories.keys.randomElement()
+        tempCategories.removeValue(forKey: randomCategory3 ?? "")
+        
+        let randomCategory4 = tempCategories.keys.randomElement()
+        
+        Category1ButtonOutlet.setTitle(randomCategory1, for: .normal)
+        Category2ButtonOutlet.setTitle(randomCategory2, for: .normal)
+        Category3ButtonOutlet.setTitle(randomCategory3, for: .normal)
+        Category4ButtonOutlet.setTitle(randomCategory4, for: .normal)
+    }
 }

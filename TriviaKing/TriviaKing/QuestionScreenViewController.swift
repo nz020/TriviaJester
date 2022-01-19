@@ -18,7 +18,7 @@ class QuestionScreenViewController: UIViewController {
     var overlay : UIView?
 
     let apiInstance = OTDBAPIController.INSTANCE
-    let selectedCategory: String = "9"// test
+    var selectedCategory: String? 
     
     var numberOfLives: Int = 3
     var currentQuestion: Int = 0
@@ -26,6 +26,8 @@ class QuestionScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("Selected Category:", selectedCategory ?? "")
         
         //Overlay + loadingIndicator before Data is loaded
         
@@ -50,7 +52,7 @@ class QuestionScreenViewController: UIViewController {
     }
     
     func getQuestion() {
-        apiInstance.getQuestion(category: selectedCategory) { result in
+        apiInstance.getQuestion(category: selectedCategory ?? "") { result in
             
             if(result?.count == 0) {
                 //Since no question got retrieved either there was an error loading the data or the player has played through all questions in the respective category. -> Throw him to the main screen.

@@ -187,25 +187,62 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFZ-GH-KkH">
-                                <rect key="frame" x="160" y="309" width="94" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hli-pJ-lhe">
+                                <rect key="frame" x="162" y="239" width="90" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Category 1"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Category1"/>
                                 <connections>
-                                    <segue destination="Sny-Yx-Lw7" kind="show" id="sBK-Up-PyW"/>
+                                    <action selector="Category1Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="v7q-lu-eXI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq4-qf-1dt">
+                                <rect key="frame" x="161" y="335" width="92" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Category2"/>
+                                <connections>
+                                    <action selector="Category2Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="IoP-f3-FR9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKI-I4-mGM">
+                                <rect key="frame" x="161" y="431" width="92" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Category3"/>
+                                <connections>
+                                    <action selector="Category3Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="DXE-Cg-bTz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2v-CF-FVt">
+                                <rect key="frame" x="161" y="527" width="92" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Category4"/>
+                                <connections>
+                                    <action selector="Category4Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="lbF-xQ-wf7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CS3-W3-My1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="centerX" secondItem="0LW-dp-HRc" secondAttribute="centerX" id="1FF-H7-S4o"/>
+                            <constraint firstItem="f2v-CF-FVt" firstAttribute="centerX" secondItem="0LW-dp-HRc" secondAttribute="centerX" id="5cR-fR-pgY"/>
                             <constraint firstItem="wax-Dn-zr1" firstAttribute="centerX" secondItem="0LW-dp-HRc" secondAttribute="centerX" id="8AX-Oy-raX"/>
+                            <constraint firstItem="wKI-I4-mGM" firstAttribute="top" secondItem="qq4-qf-1dt" secondAttribute="bottom" constant="65" id="TLu-8T-IU5"/>
                             <constraint firstItem="wax-Dn-zr1" firstAttribute="top" secondItem="CS3-W3-My1" secondAttribute="top" constant="30" id="TPU-e5-dzG"/>
-                            <constraint firstItem="bFZ-GH-KkH" firstAttribute="top" secondItem="wax-Dn-zr1" secondAttribute="bottom" constant="170" id="mlM-ed-ZSZ"/>
-                            <constraint firstItem="bFZ-GH-KkH" firstAttribute="centerX" secondItem="0LW-dp-HRc" secondAttribute="centerX" id="zFB-62-c0r"/>
+                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="top" secondItem="wax-Dn-zr1" secondAttribute="bottom" constant="100" id="VZs-26-kIQ"/>
+                            <constraint firstItem="f2v-CF-FVt" firstAttribute="top" secondItem="wKI-I4-mGM" secondAttribute="bottom" constant="65" id="aHy-Tz-KGR"/>
+                            <constraint firstItem="qq4-qf-1dt" firstAttribute="top" secondItem="Hli-pJ-lhe" secondAttribute="bottom" constant="65" id="oab-fQ-m6Q"/>
+                            <constraint firstItem="qq4-qf-1dt" firstAttribute="centerX" secondItem="0LW-dp-HRc" secondAttribute="centerX" id="uzQ-bp-DYa"/>
+                            <constraint firstItem="wKI-I4-mGM" firstAttribute="centerX" secondItem="0LW-dp-HRc" secondAttribute="centerX" id="wey-tn-onN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Juj-XR-b5n"/>
+                    <connections>
+                        <outlet property="Category1ButtonOutlet" destination="Hli-pJ-lhe" id="1TA-HK-Pra"/>
+                        <outlet property="Category2ButtonOutlet" destination="qq4-qf-1dt" id="2Ay-xD-0Jv"/>
+                        <outlet property="Category3ButtonOutlet" destination="wKI-I4-mGM" id="jEc-cN-EyK"/>
+                        <outlet property="Category4ButtonOutlet" destination="f2v-CF-FVt" id="ymh-gV-XTq"/>
+                        <segue destination="Sny-Yx-Lw7" kind="show" identifier="categorySegue" id="s9V-Cz-U5W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Pr-KK-PLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
