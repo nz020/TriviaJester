@@ -16,30 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acx-UL-Gw9">
-                                <rect key="frame" x="165" y="571" width="84" height="31"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ick-uK-JLw">
+                                <rect key="frame" x="-6" y="-6" width="425" height="905"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXI-y1-e5k" userLabel="PlayButton">
+                                <rect key="frame" x="47.5" y="563" width="319" height="114.5"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Statistics"/>
-                                <connections>
-                                    <segue destination="8gE-lJ-82Q" kind="show" id="JWS-DM-zst"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXI-y1-e5k">
-                                <rect key="frame" x="181.5" y="450" width="51" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Play"/>
+                                <buttonConfiguration key="configuration" style="plain" image="PlayButton" title=""/>
                                 <connections>
                                     <segue destination="W3C-MQ-2ro" kind="show" id="uAj-eM-CCE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acx-UL-Gw9" userLabel="StatsButton">
+                                <rect key="frame" x="47.5" y="697.5" width="319" height="114.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="StatsButton" title=""/>
+                                <connections>
+                                    <segue destination="8gE-lJ-82Q" kind="show" id="JWS-DM-zst"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JesterIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ISb-1T-8TD">
+                                <rect key="frame" x="62" y="47" width="290" height="620"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Acx-UL-Gw9" firstAttribute="top" secondItem="KXI-y1-e5k" secondAttribute="bottom" constant="90" id="Uya-wg-ZO8"/>
-                            <constraint firstItem="Acx-UL-Gw9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bXH-j9-4gX"/>
-                            <constraint firstItem="KXI-y1-e5k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gAd-nh-0WA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Acx-UL-Gw9" secondAttribute="bottom" constant="260" id="pSP-OA-8cS"/>
+                            <constraint firstItem="Acx-UL-Gw9" firstAttribute="top" secondItem="KXI-y1-e5k" secondAttribute="bottom" constant="20" id="JM6-PD-9Iw"/>
+                            <constraint firstItem="KXI-y1-e5k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PU3-ew-K8k"/>
+                            <constraint firstItem="KXI-y1-e5k" firstAttribute="trailing" secondItem="Acx-UL-Gw9" secondAttribute="trailing" id="ZNu-Db-dzi"/>
+                            <constraint firstItem="KXI-y1-e5k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47.5" id="aDR-WY-Xis"/>
+                            <constraint firstItem="KXI-y1-e5k" firstAttribute="leading" secondItem="Acx-UL-Gw9" secondAttribute="leading" id="fTQ-c6-PbI"/>
+                            <constraint firstItem="KXI-y1-e5k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="475" id="jvB-Qz-kUB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q6z-VA-NPf"/>
@@ -182,18 +192,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wax-Dn-zr1">
-                                <rect key="frame" x="165.5" y="118" width="83" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hli-pJ-lhe">
-                                <rect key="frame" x="162" y="239" width="90" height="31"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="YgZ-Xe-5tm">
+                                <rect key="frame" x="-5" y="0.0" width="424" height="900"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKI-I4-mGM">
+                                <rect key="frame" x="161" y="431" width="92" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Category1"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Category3"/>
                                 <connections>
-                                    <action selector="Category1Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="v7q-lu-eXI"/>
+                                    <action selector="Category3Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="DXE-Cg-bTz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq4-qf-1dt">
@@ -204,20 +212,26 @@
                                     <action selector="Category2Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="IoP-f3-FR9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKI-I4-mGM">
-                                <rect key="frame" x="161" y="431" width="92" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Category3"/>
-                                <connections>
-                                    <action selector="Category3Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="DXE-Cg-bTz"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wax-Dn-zr1">
+                                <rect key="frame" x="165.5" y="118" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2v-CF-FVt">
                                 <rect key="frame" x="161" y="527" width="92" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Category4"/>
                                 <connections>
                                     <action selector="Category4Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="lbF-xQ-wf7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hli-pJ-lhe">
+                                <rect key="frame" x="162" y="239" width="90" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Category1"/>
+                                <connections>
+                                    <action selector="Category1Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="v7q-lu-eXI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -247,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Pr-KK-PLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="69"/>
+            <point key="canvasLocation" x="1739.1304347826087" y="68.973214285714278"/>
         </scene>
         <!--Streak: 0-->
         <scene sceneID="omK-Wv-gmm">
@@ -367,6 +381,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="1132" height="2445"/>
+        <image name="Background2" width="1125" height="2436"/>
+        <image name="JesterIcon" width="826" height="1043"/>
+        <image name="PlayButton" width="295.33334350585938" height="100.66666412353516"/>
+        <image name="StatsButton" width="295.33334350585938" height="100.66666412353516"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
