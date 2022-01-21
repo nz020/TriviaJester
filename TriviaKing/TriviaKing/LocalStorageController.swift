@@ -166,6 +166,18 @@ struct LocalStorageController {
         print("Something was saved")
     }
     
+    func deleteAllCat() {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "CDCategory")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try context.execute(deleteRequest)
+        } catch {
+            print(error)
+            print("Error occured while trying to batch delete data.")
+        }
+    }
+    
     
     
 }

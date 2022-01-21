@@ -11,6 +11,7 @@ class CategoryScreenViewController: UIViewController {
     
     @IBOutlet weak var buttonnn: UIButton!
     @IBOutlet weak var categoryLabel: UILabel!
+    let font = UIFont(name: "Hey Comic", size: 24)
     
     var categories = ["General Knowledge": "9",
                     "Books": "10",
@@ -79,6 +80,7 @@ class CategoryScreenViewController: UIViewController {
         let randomCategory4 = tempCategories.keys.randomElement()
         
  
+        categoryLabel.font = UIFont(name: "Hey Comic", size: 24)
         
         Category1ButtonOutlet.layer.borderWidth = 2
         Category2ButtonOutlet.layer.borderWidth = 2
@@ -90,11 +92,12 @@ class CategoryScreenViewController: UIViewController {
         Category3ButtonOutlet.layer.cornerRadius = 12
         Category4ButtonOutlet.layer.cornerRadius = 12
         
-        Category1ButtonOutlet.setTitle(randomCategory1, for: .normal)
-        Category2ButtonOutlet.setTitle(randomCategory2, for: .normal)
-        Category3ButtonOutlet.setTitle(randomCategory3, for: .normal)
-        Category4ButtonOutlet.setTitle(randomCategory4, for: .normal)
+        Category1ButtonOutlet.setAttributedTitle(NSAttributedString(string: randomCategory1!, attributes: [NSAttributedString.Key.font: font!]), for: .normal)
+        Category2ButtonOutlet.setAttributedTitle(NSAttributedString(string: randomCategory2!, attributes: [NSAttributedString.Key.font: font!]), for: .normal)
+        Category3ButtonOutlet.setAttributedTitle(NSAttributedString(string: randomCategory3!, attributes: [NSAttributedString.Key.font: font!]), for: .normal)
+        Category4ButtonOutlet.setAttributedTitle(NSAttributedString(string: randomCategory4!, attributes: [NSAttributedString.Key.font: font!]), for: .normal)
         
-        Category1ButtonOutlet.titleLabel?.font = UIFont(name: "Hey-Comic", size: 24)
+        
+        
     }
 }
