@@ -21,9 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ick-uK-JLw">
-                                <rect key="frame" x="-6" y="-6" width="425" height="905"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ick-uK-JLw">
+                                <rect key="frame" x="-5.5" y="0.0" width="425" height="905"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXI-y1-e5k" userLabel="PlayButton">
                                 <rect key="frame" x="47.5" y="563" width="319" height="114.5"/>
@@ -51,10 +50,14 @@
                         <constraints>
                             <constraint firstItem="Acx-UL-Gw9" firstAttribute="top" secondItem="KXI-y1-e5k" secondAttribute="bottom" constant="20" id="JM6-PD-9Iw"/>
                             <constraint firstItem="KXI-y1-e5k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PU3-ew-K8k"/>
+                            <constraint firstItem="ick-uK-JLw" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.01" id="UkQ-ut-axQ"/>
                             <constraint firstItem="KXI-y1-e5k" firstAttribute="trailing" secondItem="Acx-UL-Gw9" secondAttribute="trailing" id="ZNu-Db-dzi"/>
+                            <constraint firstItem="ick-uK-JLw" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1.02657" id="aC0-e7-3dY"/>
                             <constraint firstItem="KXI-y1-e5k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47.5" id="aDR-WY-Xis"/>
+                            <constraint firstItem="ick-uK-JLw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="b7p-5o-hGj"/>
                             <constraint firstItem="KXI-y1-e5k" firstAttribute="leading" secondItem="Acx-UL-Gw9" secondAttribute="leading" id="fTQ-c6-PbI"/>
                             <constraint firstItem="KXI-y1-e5k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="475" id="jvB-Qz-kUB"/>
+                            <constraint firstItem="ick-uK-JLw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="r3Z-JV-vUd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q6z-VA-NPf"/>
@@ -214,7 +217,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Category3">
                                             <attributes>
-                                                <font key="NSFont" size="24" name="Hey-Comic"/>
+                                                <font key="NSFont" metaFont="system" size="24"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -233,7 +236,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Category2">
                                             <attributes>
-                                                <font key="NSFont" size="24" name="Hey-Comic"/>
+                                                <font key="NSFont" metaFont="system" size="24"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -255,7 +258,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Category4">
                                             <attributes>
-                                                <font key="NSFont" size="24" name="Hey-Comic"/>
+                                                <font key="NSFont" metaFont="system" size="24"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -293,7 +296,7 @@
                             <constraint firstItem="CS3-W3-My1" firstAttribute="bottom" secondItem="f2v-CF-FVt" secondAttribute="bottom" constant="197" id="7Uz-3c-0Zh"/>
                             <constraint firstItem="wax-Dn-zr1" firstAttribute="centerX" secondItem="0LW-dp-HRc" secondAttribute="centerX" id="8AX-Oy-raX"/>
                             <constraint firstItem="YgZ-Xe-5tm" firstAttribute="leading" secondItem="0LW-dp-HRc" secondAttribute="leadingMargin" constant="-25" id="9AV-re-oSX"/>
-                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="centerX" secondItem="YgZ-Xe-5tm" secondAttribute="centerX" id="Bu9-mB-4eS"/>
+                            <constraint firstItem="CS3-W3-My1" firstAttribute="centerX" secondItem="YgZ-Xe-5tm" secondAttribute="centerX" id="Bu9-mB-4eS"/>
                             <constraint firstItem="qq4-qf-1dt" firstAttribute="trailing" secondItem="wKI-I4-mGM" secondAttribute="trailing" id="FNX-ha-b7u"/>
                             <constraint firstItem="Hli-pJ-lhe" firstAttribute="leading" secondItem="qq4-qf-1dt" secondAttribute="leading" id="I4m-kM-jtq"/>
                             <constraint firstItem="Hli-pJ-lhe" firstAttribute="top" secondItem="wax-Dn-zr1" secondAttribute="bottom" constant="96" id="QdP-ue-If5"/>
@@ -342,13 +345,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-dL-Tco">
-                                <rect key="frame" x="20" y="540.5" width="374" height="29.5"/>
+                                <rect key="frame" x="20" y="541.5" width="374" height="28.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Answer 1">
                                             <attributes>
-                                                <font key="NSFont" size="12" name="Hey-Comic"/>
+                                                <font key="NSFont" metaFont="cellTitle"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
