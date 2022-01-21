@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Hey-Comic.otf</string>
+	</array>
 </dict>
 </plist>

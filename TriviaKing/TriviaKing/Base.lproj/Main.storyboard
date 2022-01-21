@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Hey-Comic.ttf">
+            <string>Hey-Comic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -66,6 +71,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="Rbm-cI-NkE">
+                                <rect key="frame" x="-5" y="-5" width="424" height="905"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highest Streak:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peW-fz-THR">
                                 <rect key="frame" x="134" y="108" width="146" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -192,22 +201,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="YgZ-Xe-5tm">
-                                <rect key="frame" x="-5" y="0.0" width="424" height="900"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="YgZ-Xe-5tm">
+                                <rect key="frame" x="-5" y="-5" width="424" height="905"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKI-I4-mGM">
-                                <rect key="frame" x="161" y="431" width="92" height="31"/>
+                                <rect key="frame" x="62" y="475" width="290" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="0Rs-1c-4CZ"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Category3"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Category3">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Hey-Comic"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="Category3Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="DXE-Cg-bTz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq4-qf-1dt">
-                                <rect key="frame" x="161" y="335" width="92" height="31"/>
+                                <rect key="frame" x="62" y="355" width="290" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="um2-Bv-StQ"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Category2"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Category2">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Hey-Comic"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="Category2Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="IoP-f3-FR9"/>
                                 </connections>
@@ -219,17 +249,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2v-CF-FVt">
-                                <rect key="frame" x="161" y="527" width="92" height="31"/>
+                                <rect key="frame" x="62" y="595" width="290" height="70"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Category4"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Category4">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Hey-Comic"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="Category4Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="lbF-xQ-wf7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hli-pJ-lhe">
-                                <rect key="frame" x="162" y="239" width="90" height="31"/>
+                                <rect key="frame" x="62" y="235" width="290" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="sPh-yv-3c2"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Category1"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Category1">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="38"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="Category1Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="v7q-lu-eXI"/>
                                 </connections>
@@ -238,16 +288,25 @@
                         <viewLayoutGuide key="safeArea" id="CS3-W3-My1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="centerX" secondItem="0LW-dp-HRc" secondAttribute="centerX" id="1FF-H7-S4o"/>
-                            <constraint firstItem="f2v-CF-FVt" firstAttribute="centerX" secondItem="0LW-dp-HRc" secondAttribute="centerX" id="5cR-fR-pgY"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="YgZ-Xe-5tm" secondAttribute="bottom" constant="-38" id="2UH-Je-q2i"/>
+                            <constraint firstItem="wKI-I4-mGM" firstAttribute="trailing" secondItem="f2v-CF-FVt" secondAttribute="trailing" id="3qe-AK-Z0d"/>
+                            <constraint firstItem="CS3-W3-My1" firstAttribute="bottom" secondItem="f2v-CF-FVt" secondAttribute="bottom" constant="197" id="7Uz-3c-0Zh"/>
                             <constraint firstItem="wax-Dn-zr1" firstAttribute="centerX" secondItem="0LW-dp-HRc" secondAttribute="centerX" id="8AX-Oy-raX"/>
-                            <constraint firstItem="wKI-I4-mGM" firstAttribute="top" secondItem="qq4-qf-1dt" secondAttribute="bottom" constant="65" id="TLu-8T-IU5"/>
+                            <constraint firstItem="YgZ-Xe-5tm" firstAttribute="leading" secondItem="0LW-dp-HRc" secondAttribute="leadingMargin" constant="-25" id="9AV-re-oSX"/>
+                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="centerX" secondItem="YgZ-Xe-5tm" secondAttribute="centerX" id="Bu9-mB-4eS"/>
+                            <constraint firstItem="qq4-qf-1dt" firstAttribute="trailing" secondItem="wKI-I4-mGM" secondAttribute="trailing" id="FNX-ha-b7u"/>
+                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="leading" secondItem="qq4-qf-1dt" secondAttribute="leading" id="I4m-kM-jtq"/>
+                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="top" secondItem="wax-Dn-zr1" secondAttribute="bottom" constant="96" id="QdP-ue-If5"/>
                             <constraint firstItem="wax-Dn-zr1" firstAttribute="top" secondItem="CS3-W3-My1" secondAttribute="top" constant="30" id="TPU-e5-dzG"/>
-                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="top" secondItem="wax-Dn-zr1" secondAttribute="bottom" constant="100" id="VZs-26-kIQ"/>
-                            <constraint firstItem="f2v-CF-FVt" firstAttribute="top" secondItem="wKI-I4-mGM" secondAttribute="bottom" constant="65" id="aHy-Tz-KGR"/>
-                            <constraint firstItem="qq4-qf-1dt" firstAttribute="top" secondItem="Hli-pJ-lhe" secondAttribute="bottom" constant="65" id="oab-fQ-m6Q"/>
-                            <constraint firstItem="qq4-qf-1dt" firstAttribute="centerX" secondItem="0LW-dp-HRc" secondAttribute="centerX" id="uzQ-bp-DYa"/>
-                            <constraint firstItem="wKI-I4-mGM" firstAttribute="centerX" secondItem="0LW-dp-HRc" secondAttribute="centerX" id="wey-tn-onN"/>
+                            <constraint firstItem="wKI-I4-mGM" firstAttribute="top" secondItem="qq4-qf-1dt" secondAttribute="bottom" constant="50" id="TZ0-7R-0Xw"/>
+                            <constraint firstItem="wKI-I4-mGM" firstAttribute="leading" secondItem="f2v-CF-FVt" secondAttribute="leading" id="X6F-XL-0xi"/>
+                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="trailing" secondItem="qq4-qf-1dt" secondAttribute="trailing" id="YWv-7n-bDf"/>
+                            <constraint firstItem="qq4-qf-1dt" firstAttribute="leading" secondItem="wKI-I4-mGM" secondAttribute="leading" id="cmA-GB-oPY"/>
+                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="centerX" secondItem="wax-Dn-zr1" secondAttribute="centerX" id="f2m-89-Oli"/>
+                            <constraint firstItem="qq4-qf-1dt" firstAttribute="top" secondItem="Hli-pJ-lhe" secondAttribute="bottom" constant="50" id="fcx-gZ-7nw"/>
+                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="leading" secondItem="CS3-W3-My1" secondAttribute="leading" constant="62" id="gZp-r9-w5F"/>
+                            <constraint firstItem="YgZ-Xe-5tm" firstAttribute="top" secondItem="0LW-dp-HRc" secondAttribute="topMargin" constant="-93" id="hSi-Wd-N0H"/>
+                            <constraint firstItem="f2v-CF-FVt" firstAttribute="top" secondItem="wKI-I4-mGM" secondAttribute="bottom" constant="50" id="oCW-Ie-BpC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Juj-XR-b5n"/>
@@ -256,6 +315,7 @@
                         <outlet property="Category2ButtonOutlet" destination="qq4-qf-1dt" id="2Ay-xD-0Jv"/>
                         <outlet property="Category3ButtonOutlet" destination="wKI-I4-mGM" id="jEc-cN-EyK"/>
                         <outlet property="Category4ButtonOutlet" destination="f2v-CF-FVt" id="ymh-gV-XTq"/>
+                        <outlet property="categoryLabel" destination="wax-Dn-zr1" id="esf-KK-ai2"/>
                         <segue destination="Sny-Yx-Lw7" kind="show" identifier="categorySegue" id="s9V-Cz-U5W"/>
                     </connections>
                 </viewController>
@@ -271,16 +331,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="sgK-mN-I33">
+                                <rect key="frame" x="-5" y="-5" width="424" height="905"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiL-Se-YS8">
                                 <rect key="frame" x="72" y="118" width="270" height="142"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-dL-Tco">
-                                <rect key="frame" x="20" y="539" width="374" height="31"/>
+                                <rect key="frame" x="20" y="540.5" width="374" height="29.5"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Answer 1"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Answer 1">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Hey-Comic"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="firstAnswerOnClick:" destination="Sny-Yx-Lw7" eventType="touchUpInside" id="O4V-Rj-tYH"/>
                                 </connections>
@@ -380,6 +452,7 @@
             <point key="canvasLocation" x="18.840579710144929" y="67.633928571428569"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.2241069674" green="0.1319052577" blue="0.83534640069999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="Background" width="1132" height="2445"/>
         <image name="Background2" width="1125" height="2436"/>

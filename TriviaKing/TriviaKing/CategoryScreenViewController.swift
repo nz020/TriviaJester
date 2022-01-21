@@ -9,6 +9,9 @@ import UIKit
 
 class CategoryScreenViewController: UIViewController {
     
+    @IBOutlet weak var buttonnn: UIButton!
+    @IBOutlet weak var categoryLabel: UILabel!
+    
     var categories = ["General Knowledge": "9",
                     "Books": "10",
                     "Film/Movies": "11",
@@ -75,9 +78,23 @@ class CategoryScreenViewController: UIViewController {
         
         let randomCategory4 = tempCategories.keys.randomElement()
         
+ 
+        
+        Category1ButtonOutlet.layer.borderWidth = 2
+        Category2ButtonOutlet.layer.borderWidth = 2
+        Category3ButtonOutlet.layer.borderWidth = 2
+        Category4ButtonOutlet.layer.borderWidth = 2
+  
+        Category1ButtonOutlet.layer.cornerRadius = 12
+        Category2ButtonOutlet.layer.cornerRadius = 12
+        Category3ButtonOutlet.layer.cornerRadius = 12
+        Category4ButtonOutlet.layer.cornerRadius = 12
+        
         Category1ButtonOutlet.setTitle(randomCategory1, for: .normal)
         Category2ButtonOutlet.setTitle(randomCategory2, for: .normal)
         Category3ButtonOutlet.setTitle(randomCategory3, for: .normal)
         Category4ButtonOutlet.setTitle(randomCategory4, for: .normal)
+        
+        Category1ButtonOutlet.titleLabel?.font = UIFont(name: "Hey-Comic", size: 24)
     }
 }
