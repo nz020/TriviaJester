@@ -9,7 +9,6 @@ import UIKit
 
 class CategoryScreenViewController: UIViewController {
     
-    @IBOutlet weak var buttonnn: UIButton!
     @IBOutlet weak var categoryLabel: UILabel!
     let font = UIFont(name: "Hey Comic", size: 24)
     
