@@ -34,7 +34,7 @@ struct LocalStorageController {
         return savedCategories
     }
     
-    func getMostPlayed() -> CDCategory {
+    func getMostPlayed() -> CDCategory? {
         var mostPlayedCategory: CDCategory?
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "CDCategory")
         request.fetchLimit = 1
@@ -42,16 +42,18 @@ struct LocalStorageController {
         
         do {
             let results = try context.fetch(request)
-            mostPlayedCategory = results[0] as? CDCategory
+            if(results.count > 0) {
+                mostPlayedCategory = results[0] as? CDCategory
+            }
         } catch let error {
             print(error)
             print("Error fetching most played Category.")
         }
         
-        return mostPlayedCategory!
+        return mostPlayedCategory
     }
     
-    func getLongestStreak() -> CDCategory {
+    func getLongestStreak() -> CDCategory? {
         var longestStreakCategory: CDCategory?
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "CDCategory")
         request.fetchLimit = 1
@@ -59,28 +61,41 @@ struct LocalStorageController {
         
         do {
             let results = try context.fetch(request)
-            longestStreakCategory = results[0] as? CDCategory
+            if(results.count > 0) {
+                longestStreakCategory = results[0] as? CDCategory
+            }
         } catch let error {
             print(error)
             print("Error fetching longest Streak.")
         }
         
-        return longestStreakCategory!
+        return longestStreakCategory
     }
     
-    func getBestAnswerRatio() -> CDCategory {
+    func getBestAnswerRatio() -> CDCategory? {
         let allCategories = getAllCategories()
-        var bestCategory: CDCategory = allCategories[0]
+        var bestCategory: CDCategory?
+        if (allCategories.count > 0) {
+            bestCategory = allCategories[0]
+        } else {
+            bestCategory = nil
+        }
+        
         
         // There might be a better way to sort by the ratios.
         // ToDo: Look into alternatives for this function
         for category in allCategories {
             let categoryRatio = (category.answeredRight / (category.answeredRight + category.answeredWrong))
-            let bestRatio = (bestCategory.answeredRight / (bestCategory.answeredRight + bestCategory.answeredWrong))
-            
-            if(categoryRatio > bestRatio) {
+            if(bestCategory != nil) {
+                let bestRatio = (bestCategory!.answeredRight / (bestCategory!.answeredRight + bestCategory!.answeredWrong))
+                if(categoryRatio > bestRatio) {
+                    bestCategory = category
+                }
+            } else {
                 bestCategory = category
             }
+            
+            
         }
         
         return bestCategory
@@ -138,6 +153,7 @@ struct LocalStorageController {
                 savedCategory.setValue(Int64(streak), forKey: "longestStreak")
             }
             
+            print(savedCategory)
             do {
                 try context.save()
                 print("Already existing category saved.")
@@ -154,6 +170,7 @@ struct LocalStorageController {
             newCategory.longestStreak = Int64(streak)
             newCategory.timesPlayed = 1
             
+            print(newCategory)
             do {
                 try context.save()
                 print("New Category saved.")

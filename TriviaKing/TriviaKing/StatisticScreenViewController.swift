@@ -9,6 +9,7 @@ import UIKit
 
 class StatisticScreenViewController: UIViewController {
     
+    @IBOutlet weak var DeleteButton: UIButton!
     @IBOutlet weak var HighestStreak: UILabel!
     @IBOutlet weak var TotalRounds: UILabel!
     @IBOutlet weak var MostPlayedCat: UILabel!
@@ -33,8 +34,8 @@ class StatisticScreenViewController: UIViewController {
         DispatchQueue.main.async {
             self.loadData()
             self.setLabels()
-            
         }
+         
     }
     
     func loadData() {
@@ -53,7 +54,7 @@ class StatisticScreenViewController: UIViewController {
     }
     
     func setLabels() {
-        HighestStreak.text = "\(highestStreakCat?.name ?? ""): \(highestStreakCat?.longestStreak ?? 0)"
+        HighestStreak.text = "\(highestStreakCat?.longestStreak ?? 0)"
         TotalRounds.text = "\(totalRounds)"
         
         MostPlayedCat.text = mostPlayedCat?.name
@@ -63,9 +64,19 @@ class StatisticScreenViewController: UIViewController {
         BestCatTime.text = "Times Played: \(bestCat?.timesPlayed ?? 0)"
         BestCatStreak.text = "Longest Streak: \(bestCat?.longestStreak ?? 0)"
         BestCatCorrect.text = "Correct Answers: \(bestCat?.answeredRight ?? 0)"
+        
+        DeleteButton.layer.borderWidth = 2
+        DeleteButton.layer.cornerRadius = 12
     }
     
-
+    @IBAction func deleteOnClick(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.database?.deleteAllCat()
+            self.loadData()
+            self.setLabels()
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

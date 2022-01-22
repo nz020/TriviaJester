@@ -93,43 +93,55 @@ class QuestionScreenViewController: UIViewController {
         var answersArray: [String] = [correctAnswer] + wrongAnswers;
         answersArray.shuffle()
         
+        self.firstAnswer.setTitle(answersArray[0].removingPercentEncoding, for: .normal)
         self.firstAnswer.setAttributedTitle(NSAttributedString(string: answersArray[0].removingPercentEncoding!, attributes: [NSAttributedString.Key.font: font!]), for: .normal)
+        self.secondAnswer.setTitle(answersArray[1].removingPercentEncoding, for: .normal)
         self.secondAnswer.setAttributedTitle(NSAttributedString(string: answersArray[1].removingPercentEncoding!, attributes: [NSAttributedString.Key.font: font!]), for: .normal)
+        self.thirdAnswer.setTitle(answersArray[2].removingPercentEncoding, for: .normal)
+
         self.thirdAnswer.setAttributedTitle(NSAttributedString(string: answersArray[2].removingPercentEncoding!, attributes: [NSAttributedString.Key.font: font!]), for: .normal)
+        self.fourthAnswer.setTitle(answersArray[3].removingPercentEncoding, for: .normal)
         self.fourthAnswer.setAttributedTitle(NSAttributedString(string: answersArray[3].removingPercentEncoding!, attributes: [NSAttributedString.Key.font: font!]), for: .normal)
+        
+        
     }
     
     @IBAction func firstAnswerOnClick(_ sender: UIButton) {
-        let buttonTitle = String(sender.title(for: .normal) ?? "")
+        let buttonTitle = "\(sender.title(for: .normal) ?? "")"
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
         getQuestion()
     }
     
     @IBAction func secondAnswerOnClick(_ sender: UIButton) {
-        let buttonTitle = String(sender.title(for: .normal) ?? "")
+        let buttonTitle = "\(sender.title(for: .normal) ?? "")"
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
         getQuestion()
     }
     
     @IBAction func thirdAnswerOnClick(_ sender: UIButton) {
-        let buttonTitle = String(sender.title(for: .normal) ?? "")
+        let buttonTitle = "\(sender.title(for: .normal) ?? "")"
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
         getQuestion()
     }
     
     @IBAction func fourthAnswerOnClick(_ sender: UIButton) {
-        let buttonTitle = String(sender.title(for: .normal) ?? "")
+        let buttonTitle = "\(sender.title(for: .normal) ?? "")"
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
         getQuestion()
     }
     
     func checkCorrectAnswer (givenAnswer: String) {
-        let correctAnswer = questions[0].correct_answer
-        if (givenAnswer==correctAnswer) {
+        let correctAnswer = questions[0].correct_answer.removingPercentEncoding ?? ""
+        let clicked = givenAnswer.removingPercentEncoding ?? ""
+        print(correctAnswer)
+        
+        print(clicked)
+        
+        if (clicked==correctAnswer) {
             print("Correct")
         }
         else {

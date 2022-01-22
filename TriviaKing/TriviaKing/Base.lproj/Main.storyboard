@@ -77,119 +77,161 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2" translatesAutoresizingMaskIntoConstraints="NO" id="Rbm-cI-NkE">
                                 <rect key="frame" x="-355.5" y="0.0" width="1125" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Box1" translatesAutoresizingMaskIntoConstraints="NO" id="LKX-1y-MFZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box1" translatesAutoresizingMaskIntoConstraints="NO" id="LKX-1y-MFZ">
                                 <rect key="frame" x="20" y="117" width="374" height="190"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Box3" translatesAutoresizingMaskIntoConstraints="NO" id="QQW-98-0zC">
-                                <rect key="frame" x="20" y="520" width="374" height="272"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Box2" translatesAutoresizingMaskIntoConstraints="NO" id="eWu-4l-8DH">
-                                <rect key="frame" x="20" y="329" width="183" height="183"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="183" id="EI1-If-87s"/>
-                                    <constraint firstAttribute="height" constant="183" id="tQ0-hy-Maj"/>
+                                    <constraint firstAttribute="width" secondItem="LKX-1y-MFZ" secondAttribute="height" multiplier="187:95" id="r1Y-rS-UNf"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Box2" translatesAutoresizingMaskIntoConstraints="NO" id="8Eo-32-uaK">
-                                <rect key="frame" x="211" y="329" width="183" height="183"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box3" translatesAutoresizingMaskIntoConstraints="NO" id="QQW-98-0zC">
+                                <rect key="frame" x="20" y="510" width="374" height="272"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QQW-98-0zC" secondAttribute="height" multiplier="11:8" id="DC4-yo-2Ez"/>
+                                    <constraint firstAttribute="height" constant="272" id="uWq-wd-afd"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highest Streak:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peW-fz-THR">
-                                <rect key="frame" x="229" y="362" width="146" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box2" translatesAutoresizingMaskIntoConstraints="NO" id="eWu-4l-8DH">
+                                <rect key="frame" x="20" y="327" width="183" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="183" id="SZj-BZ-pNQ"/>
+                                    <constraint firstAttribute="height" constant="183" id="mn6-cz-qDW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box2" translatesAutoresizingMaskIntoConstraints="NO" id="8Eo-32-uaK">
+                                <rect key="frame" x="211" y="327" width="183" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="Azd-yd-uDb"/>
+                                    <constraint firstAttribute="width" constant="183" id="KnF-XZ-mnJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highest  Streak" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peW-fz-THR">
+                                <rect key="frame" x="264.5" y="367" width="76" height="51"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzD-Ll-fIf">
-                                <rect key="frame" x="229" y="394" width="146" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzD-Ll-fIf">
+                                <rect key="frame" x="298" y="438" width="9" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Rounds  Played:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7co-OY-Bl1">
-                                <rect key="frame" x="40" y="355" width="126.5" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most played Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="956-J6-KnV">
+                                <rect key="frame" x="105" y="157" width="204" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Most played Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="956-J6-KnV">
-                                <rect key="frame" x="100.5" y="157" width="213" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zim-dW-QE8">
+                                <rect key="frame" x="173" y="202.5" width="68.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zim-dW-QE8">
-                                <rect key="frame" x="40" y="201" width="335" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times Played: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkx-e5-KCE">
+                                <rect key="frame" x="149" y="243" width="116.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Times Played: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkx-e5-KCE">
-                                <rect key="frame" x="143.5" y="243" width="127" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUA-xs-51U">
+                                <rect key="frame" x="140.5" y="550" width="133" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Best Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUA-xs-51U">
-                                <rect key="frame" x="140" y="559" width="135" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikK-9q-wre">
+                                <rect key="frame" x="173" y="595.5" width="68.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikK-9q-wre">
-                                <rect key="frame" x="40" y="603" width="335" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times Played: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYt-bP-48H">
+                                <rect key="frame" x="149" y="636" width="116.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Times Played: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYt-bP-48H">
-                                <rect key="frame" x="40" y="645" width="335" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct Answers: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgM-yc-hQp">
+                                <rect key="frame" x="133.5" y="676.5" width="147.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct Answers: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgM-yc-hQp">
-                                <rect key="frame" x="40" y="687" width="335" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longest Streak: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvO-ZH-FYX">
+                                <rect key="frame" x="140.5" y="717" width="133.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longest Streak: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvO-ZH-FYX">
-                                <rect key="frame" x="40" y="729" width="335" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ9-yh-0QA">
+                                <rect key="frame" x="107" y="438" width="9" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ9-yh-0QA">
-                                <rect key="frame" x="45" y="418" width="133" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Rounds  Played" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7co-OY-Bl1">
+                                <rect key="frame" x="49" y="367" width="125" height="51"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck0-e7-kdb">
+                                <rect key="frame" x="143" y="790" width="130" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.74527221919999997" green="0.15443530680000001" blue="0.1058013365" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Delete Statistics"/>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteOnClick:" destination="8gE-lJ-82Q" eventType="touchUpInside" id="fgE-y3-eWc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xf6-jb-Rcs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="peW-fz-THR" firstAttribute="top" secondItem="8Eo-32-uaK" secondAttribute="top" constant="40" id="1ca-yf-aXO"/>
+                            <constraint firstItem="Xf6-jb-Rcs" firstAttribute="trailing" secondItem="LKX-1y-MFZ" secondAttribute="trailing" constant="20" id="4PQ-xu-PpN"/>
+                            <constraint firstItem="QQW-98-0zC" firstAttribute="leading" secondItem="Xf6-jb-Rcs" secondAttribute="leading" constant="20" id="4rb-sa-j8A"/>
+                            <constraint firstItem="MvO-ZH-FYX" firstAttribute="centerX" secondItem="QQW-98-0zC" secondAttribute="centerX" id="5Yd-sE-qHX"/>
+                            <constraint firstItem="Lkx-e5-KCE" firstAttribute="top" secondItem="zim-dW-QE8" secondAttribute="bottom" constant="20" id="67h-d4-3ru"/>
+                            <constraint firstItem="7co-OY-Bl1" firstAttribute="top" secondItem="eWu-4l-8DH" secondAttribute="top" constant="40" id="6bS-xo-iUb"/>
+                            <constraint firstItem="Xf6-jb-Rcs" firstAttribute="trailing" secondItem="QQW-98-0zC" secondAttribute="trailing" constant="20" id="6ma-nO-QBq"/>
+                            <constraint firstItem="Xf6-jb-Rcs" firstAttribute="trailing" secondItem="8Eo-32-uaK" secondAttribute="trailing" constant="20" id="9Oe-Vo-gf5"/>
+                            <constraint firstItem="dzD-Ll-fIf" firstAttribute="top" secondItem="peW-fz-THR" secondAttribute="bottom" constant="20" id="AwJ-vX-BcW"/>
                             <constraint firstItem="Rbm-cI-NkE" firstAttribute="width" secondItem="FyM-OG-DaM" secondAttribute="width" multiplier="2.71739" id="Bai-wJ-fGg"/>
+                            <constraint firstItem="ikK-9q-wre" firstAttribute="top" secondItem="YUA-xs-51U" secondAttribute="bottom" constant="20" id="F4O-IA-3QZ"/>
+                            <constraint firstItem="956-J6-KnV" firstAttribute="centerX" secondItem="Xf6-jb-Rcs" secondAttribute="centerX" id="Hvh-9u-Owu"/>
                             <constraint firstItem="Rbm-cI-NkE" firstAttribute="centerX" secondItem="Xf6-jb-Rcs" secondAttribute="centerX" id="Iz3-Nm-fX3"/>
-                            <constraint firstItem="LKX-1y-MFZ" firstAttribute="top" secondItem="Xf6-jb-Rcs" secondAttribute="top" constant="29" id="ONK-HS-b2O"/>
-                            <constraint firstItem="LKX-1y-MFZ" firstAttribute="leading" secondItem="Xf6-jb-Rcs" secondAttribute="leading" constant="20" id="grh-Of-Cnk"/>
-                            <constraint firstItem="Xf6-jb-Rcs" firstAttribute="trailing" secondItem="LKX-1y-MFZ" secondAttribute="trailing" constant="20" id="pPs-pt-abK"/>
+                            <constraint firstItem="qYt-bP-48H" firstAttribute="top" secondItem="ikK-9q-wre" secondAttribute="bottom" constant="20" id="JCe-FN-sCD"/>
+                            <constraint firstItem="956-J6-KnV" firstAttribute="top" secondItem="LKX-1y-MFZ" secondAttribute="top" constant="40" id="Kge-PT-KAt"/>
+                            <constraint firstItem="eWu-4l-8DH" firstAttribute="top" secondItem="LKX-1y-MFZ" secondAttribute="bottom" constant="20" id="Kmh-Of-3V2"/>
+                            <constraint firstItem="Lkx-e5-KCE" firstAttribute="centerX" secondItem="Xf6-jb-Rcs" secondAttribute="centerX" id="NUh-jx-y5u"/>
+                            <constraint firstItem="peW-fz-THR" firstAttribute="centerX" secondItem="8Eo-32-uaK" secondAttribute="centerX" id="SAE-7u-8Hc"/>
+                            <constraint firstItem="dzD-Ll-fIf" firstAttribute="centerX" secondItem="8Eo-32-uaK" secondAttribute="centerX" id="SE6-pj-jwU"/>
+                            <constraint firstItem="LKX-1y-MFZ" firstAttribute="top" secondItem="Xf6-jb-Rcs" secondAttribute="top" constant="29" id="UQ9-Ny-ASc"/>
+                            <constraint firstItem="QQW-98-0zC" firstAttribute="top" secondItem="eWu-4l-8DH" secondAttribute="bottom" id="Xc4-OD-mkE"/>
+                            <constraint firstItem="RgM-yc-hQp" firstAttribute="top" secondItem="qYt-bP-48H" secondAttribute="bottom" constant="20" id="YWU-Ra-zO0"/>
+                            <constraint firstItem="MvO-ZH-FYX" firstAttribute="top" secondItem="RgM-yc-hQp" secondAttribute="bottom" constant="20" id="cIF-TT-nkz"/>
+                            <constraint firstItem="pZ9-yh-0QA" firstAttribute="centerX" secondItem="eWu-4l-8DH" secondAttribute="centerX" id="cuY-l2-N16"/>
+                            <constraint firstItem="8Eo-32-uaK" firstAttribute="top" secondItem="LKX-1y-MFZ" secondAttribute="bottom" constant="20" id="cxr-4p-Rq7"/>
+                            <constraint firstItem="eWu-4l-8DH" firstAttribute="leading" secondItem="Xf6-jb-Rcs" secondAttribute="leading" constant="20" id="dZc-3L-sfw"/>
+                            <constraint firstItem="zim-dW-QE8" firstAttribute="top" secondItem="956-J6-KnV" secondAttribute="bottom" constant="20" id="epA-F0-NLv"/>
+                            <constraint firstItem="ikK-9q-wre" firstAttribute="centerX" secondItem="QQW-98-0zC" secondAttribute="centerX" id="fg0-A1-fvP"/>
+                            <constraint firstItem="7co-OY-Bl1" firstAttribute="centerX" secondItem="eWu-4l-8DH" secondAttribute="centerX" id="g2F-Ga-bUk"/>
+                            <constraint firstItem="YUA-xs-51U" firstAttribute="top" secondItem="QQW-98-0zC" secondAttribute="top" constant="40" id="h5m-F0-3zS"/>
+                            <constraint firstItem="pZ9-yh-0QA" firstAttribute="top" secondItem="7co-OY-Bl1" secondAttribute="bottom" constant="20" id="hfy-N3-iol"/>
+                            <constraint firstItem="LKX-1y-MFZ" firstAttribute="leading" secondItem="Xf6-jb-Rcs" secondAttribute="leading" constant="20" id="pOg-CU-Rau"/>
+                            <constraint firstItem="RgM-yc-hQp" firstAttribute="centerX" secondItem="QQW-98-0zC" secondAttribute="centerX" id="pUs-yz-n09"/>
+                            <constraint firstItem="qYt-bP-48H" firstAttribute="centerX" secondItem="QQW-98-0zC" secondAttribute="centerX" id="rzw-ML-mgh"/>
+                            <constraint firstItem="YUA-xs-51U" firstAttribute="centerX" secondItem="QQW-98-0zC" secondAttribute="centerX" id="yYt-Fe-Jrh"/>
                             <constraint firstAttribute="top" secondItem="Rbm-cI-NkE" secondAttribute="top" id="zQC-gs-d5O"/>
                             <constraint firstItem="Rbm-cI-NkE" firstAttribute="height" secondItem="FyM-OG-DaM" secondAttribute="height" id="zZu-hi-6s1"/>
+                            <constraint firstItem="zim-dW-QE8" firstAttribute="centerX" secondItem="Xf6-jb-Rcs" secondAttribute="centerX" id="zwX-9U-UQZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Statistics" id="v8C-Oh-Hwo"/>
@@ -198,6 +240,7 @@
                         <outlet property="BestCatCorrect" destination="RgM-yc-hQp" id="VZw-5O-f5z"/>
                         <outlet property="BestCatStreak" destination="MvO-ZH-FYX" id="YLW-Sx-XSu"/>
                         <outlet property="BestCatTime" destination="qYt-bP-48H" id="Gju-Tj-zMg"/>
+                        <outlet property="DeleteButton" destination="ck0-e7-kdb" id="AV8-rh-5BY"/>
                         <outlet property="HighestStreak" destination="dzD-Ll-fIf" id="8fB-qE-6PB"/>
                         <outlet property="MostPlayedCat" destination="zim-dW-QE8" id="b86-lQ-jNp"/>
                         <outlet property="MostPlayedCatTime" destination="Lkx-e5-KCE" id="1Lq-LG-VUR"/>
@@ -265,6 +308,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2v-CF-FVt">
                                 <rect key="frame" x="62" y="595" width="290" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="jiF-lP-bvp"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
                                     <attributedString key="attributedTitle">
