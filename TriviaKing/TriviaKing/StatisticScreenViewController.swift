@@ -18,6 +18,8 @@ class StatisticScreenViewController: UIViewController {
     @IBOutlet weak var BestCatTime: UILabel!
     @IBOutlet weak var BestCatCorrect: UILabel!
     @IBOutlet weak var BestCatStreak: UILabel!
+    let font = UIFont(name: "Hey Comic", size: 18)
+
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var database: LocalStorageController?
@@ -67,6 +69,8 @@ class StatisticScreenViewController: UIViewController {
         
         DeleteButton.layer.borderWidth = 2
         DeleteButton.layer.cornerRadius = 12
+        DeleteButton.backgroundColor = UIColor(red: 207/255,green: 0, blue: 0, alpha: 1)
+        DeleteButton.setAttributedTitle(NSAttributedString(string: "Delete Statistics", attributes: [NSAttributedString.Key.font: font!]), for: .normal)
     }
     
     @IBAction func deleteOnClick(_ sender: Any) {

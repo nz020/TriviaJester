@@ -11,12 +11,16 @@ import CoreData
 
 struct LocalStorageController {
     
-    var delegate: AppDelegate
+    var delegate: AppDelegate?
     var context: NSManagedObjectContext
     
     init(delegate: AppDelegate) {
         self.delegate = delegate
         self.context = delegate.persistentContainer.viewContext
+    }
+    
+    init(context: NSManagedObjectContext) {
+        self.context = context
     }
     
     func getAllCategories() -> [CDCategory] {
@@ -85,10 +89,10 @@ struct LocalStorageController {
         // There might be a better way to sort by the ratios.
         // ToDo: Look into alternatives for this function
         for category in allCategories {
-            let categoryRatio = (category.answeredRight / (category.answeredRight + category.answeredWrong))
+            let categoryRatio = (Float(category.answeredRight) / (Float(category.answeredRight) + Float(category.answeredWrong)))
             if(bestCategory != nil) {
-                let bestRatio = (bestCategory!.answeredRight / (bestCategory!.answeredRight + bestCategory!.answeredWrong))
-                if(categoryRatio > bestRatio) {
+                let bestRatio = (Float(bestCategory!.answeredRight) / (Float(bestCategory!.answeredRight) + Float(bestCategory!.answeredWrong)))
+                if(categoryRatio >= bestRatio) {
                     bestCategory = category
                 }
             } else {
@@ -153,10 +157,8 @@ struct LocalStorageController {
                 savedCategory.setValue(Int64(streak), forKey: "longestStreak")
             }
             
-            print(savedCategory)
             do {
                 try context.save()
-                print("Already existing category saved.")
             } catch let error {
                 print(error)
                 print("Error saving CoreData context.")
@@ -170,17 +172,14 @@ struct LocalStorageController {
             newCategory.longestStreak = Int64(streak)
             newCategory.timesPlayed = 1
             
-            print(newCategory)
             do {
                 try context.save()
-                print("New Category saved.")
             } catch let error {
                 print(error)
                 print("Error saving CoreData context.")
             }
         }
         
-        print("Something was saved")
     }
     
     func deleteAllCat() {
@@ -192,6 +191,21 @@ struct LocalStorageController {
         } catch {
             print(error)
             print("Error occured while trying to batch delete data.")
+        }
+    }
+    
+    func deleteCat(category name: String) {
+        if(categoryExists(name: name)) {
+            let savedCategory = getCategoryByName(name: name)
+            
+            context.delete(savedCategory)
+            
+            do {
+                try context.save()
+            } catch {
+                print(error)
+                print("Error occured while trying to delete category with name: \(name)")
+            }
         }
     }
     
