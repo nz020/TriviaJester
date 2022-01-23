@@ -78,8 +78,16 @@ class CategoryScreenViewController: UIViewController {
         
         let randomCategory4 = tempCategories.keys.randomElement()
         
- 
-        categoryLabel.font = UIFont(name: "Hey Comic", size: 24)
+        let attributedCategoryString = NSAttributedString(
+            string: "Choose a Category",
+            attributes: [
+                NSAttributedString.Key.strokeColor: UIColor.black,
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                NSAttributedString.Key.strokeWidth: -4.0,
+            ]
+        )
+        categoryLabel.attributedText = attributedCategoryString
+        categoryLabel.font = UIFont(name: "Hey Comic", size: 42)
         
         Category1ButtonOutlet.layer.borderWidth = 2
         Category2ButtonOutlet.layer.borderWidth = 2

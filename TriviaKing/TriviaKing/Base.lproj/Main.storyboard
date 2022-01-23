@@ -347,10 +347,10 @@
                                     <action selector="Category2Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="IoP-f3-FR9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wax-Dn-zr1">
-                                <rect key="frame" x="165.5" y="118" width="83" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wax-Dn-zr1">
+                                <rect key="frame" x="165.5" y="118" width="83" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2v-CF-FVt">
@@ -397,7 +397,7 @@
                             <constraint firstItem="CS3-W3-My1" firstAttribute="centerX" secondItem="YgZ-Xe-5tm" secondAttribute="centerX" id="Bu9-mB-4eS"/>
                             <constraint firstItem="qq4-qf-1dt" firstAttribute="trailing" secondItem="wKI-I4-mGM" secondAttribute="trailing" id="FNX-ha-b7u"/>
                             <constraint firstItem="Hli-pJ-lhe" firstAttribute="leading" secondItem="qq4-qf-1dt" secondAttribute="leading" id="I4m-kM-jtq"/>
-                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="top" secondItem="wax-Dn-zr1" secondAttribute="bottom" constant="96" id="QdP-ue-If5"/>
+                            <constraint firstItem="Hli-pJ-lhe" firstAttribute="top" secondItem="wax-Dn-zr1" secondAttribute="bottom" constant="50" id="QdP-ue-If5"/>
                             <constraint firstItem="wax-Dn-zr1" firstAttribute="top" secondItem="CS3-W3-My1" secondAttribute="top" constant="30" id="TPU-e5-dzG"/>
                             <constraint firstItem="wKI-I4-mGM" firstAttribute="top" secondItem="qq4-qf-1dt" secondAttribute="bottom" constant="50" id="TZ0-7R-0Xw"/>
                             <constraint firstItem="wKI-I4-mGM" firstAttribute="leading" secondItem="f2v-CF-FVt" secondAttribute="leading" id="X6F-XL-0xi"/>
@@ -464,24 +464,20 @@
                                 <rect key="frame" x="217" y="711" width="177" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxWrongAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-xN-7le" userLabel="BoxWrongAnswer3">
-                                <rect key="frame" x="217" y="711" width="177" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxCorrectAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="E9R-E0-f3i" userLabel="BoxCorrectAnswer3">
-                                <rect key="frame" x="217" y="711" width="177" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="WeQ-b4-xDP" userLabel="BoxAnswer4">
                                 <rect key="frame" x="20" y="711" width="177" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxCorrectAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-Za-Edi" userLabel="BoxCorrectAnswer4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxCorrectAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="E9R-E0-f3i" userLabel="BoxCorrectAnswer3">
                                 <rect key="frame" x="19" y="711" width="177" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxWrongAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-xN-7le" userLabel="BoxWrongAnswer3">
+                                <rect key="frame" x="20" y="711" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxWrongAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="Aix-IX-uix" userLabel="BoxWrongAnswer4">
-                                <rect key="frame" x="19" y="711" width="177" height="128"/>
+                                <rect key="frame" x="217" y="711" width="177" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Box3" translatesAutoresizingMaskIntoConstraints="NO" id="ZT7-e5-to4">
@@ -531,6 +527,25 @@
                                     <action selector="secondAnswerOnClick:" destination="Sny-Yx-Lw7" eventType="touchUpInside" id="6TC-R4-4xU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cW-8o-dAC">
+                                <rect key="frame" x="368" y="497" width="25" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FlameWBorder" translatesAutoresizingMaskIntoConstraints="NO" id="4gB-dZ-ivc">
+                                <rect key="frame" x="20" y="156" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="USz-P8-k33">
+                                <rect key="frame" x="313" y="156" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxCorrectAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-Za-Edi" userLabel="BoxCorrectAnswer4">
+                                <rect key="frame" x="217" y="711" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIX-LC-EqM">
                                 <rect key="frame" x="235" y="730" width="148" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -540,14 +555,6 @@
                                     <action selector="fourthAnswerOnClick:" destination="Sny-Yx-Lw7" eventType="touchUpInside" id="fpD-kW-BnW"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FlameWBorder" translatesAutoresizingMaskIntoConstraints="NO" id="4gB-dZ-ivc">
-                                <rect key="frame" x="20" y="156" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="USz-P8-k33">
-                                <rect key="frame" x="313" y="156" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Su3-k8-QI4">
                                 <rect key="frame" x="94" y="156" width="57" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -559,13 +566,6 @@
                                 <rect key="frame" x="339" y="156" width="29" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cW-8o-dAC">
-                                <rect key="frame" x="368" y="497" width="25" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

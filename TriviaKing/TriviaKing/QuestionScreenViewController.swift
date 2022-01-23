@@ -42,7 +42,7 @@ class QuestionScreenViewController: UIViewController {
     
     var isAnswerCorrect: Bool = false;
     var numberOfLives: Int = 3
-    var currentQuestion: Int = 0
+    var streak: Int = 0
     var questions: [Question] = [Question]()
     
     var secondsBeforeNextQuestion: Int = 5
@@ -94,7 +94,7 @@ class QuestionScreenViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         print(OTDBAPIController.catDict.someKey(forValue: selectedCategory!)!)
-        database?.saveCategory(category: OTDBAPIController.catDict.someKey(forValue: selectedCategory!)!, correctAnswers: (currentQuestion - 3 + numberOfLives), wrongAnswers: (-1 * (numberOfLives-3)), streak: currentQuestion - 3 + numberOfLives)
+        database?.saveCategory(category: OTDBAPIController.catDict.someKey(forValue: selectedCategory!)!, correctAnswers: (streak - 3 + numberOfLives), wrongAnswers: (-1 * (numberOfLives-3)), streak: streak - 3 + numberOfLives)
     }
     
     func getQuestion() {
@@ -108,7 +108,7 @@ class QuestionScreenViewController: UIViewController {
             DispatchQueue.main.async {
                 self.questions = result!
                 self.updateView()
-                self.currentQuestion += 1
+                self.streak += 1
             }
             
         }
