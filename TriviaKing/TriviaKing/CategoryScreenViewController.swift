@@ -78,6 +78,7 @@ class CategoryScreenViewController: UIViewController {
         )
         categoryLabel.attributedText = attributedCategoryString
         categoryLabel.font = UIFont(name: "Hey Comic", size: 42)
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
         
         Category1ButtonOutlet.layer.borderWidth = 2
         Category2ButtonOutlet.layer.borderWidth = 2

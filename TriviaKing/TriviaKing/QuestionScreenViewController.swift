@@ -54,6 +54,9 @@ class QuestionScreenViewController: UIViewController {
         
         hideBoxes()
         
+        self.navigationController?.navigationBar.tintColor = UIColor.white;
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
         database = LocalStorageController(delegate: appDelegate)
         numberofLivesLabel.text = "\(numberOfLives)"
         streakLabel.text = "\(streak)"
