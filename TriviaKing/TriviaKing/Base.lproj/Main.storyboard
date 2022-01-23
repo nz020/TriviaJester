@@ -379,7 +379,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Category1" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="Hey-Comic" family="Hey Comic" pointSize="38"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="Category1Button:" destination="W3C-MQ-2ro" eventType="touchUpInside" id="v7q-lu-eXI"/>
@@ -436,92 +436,135 @@
                                 <rect key="frame" x="-5" y="-5" width="424" height="905"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiL-Se-YS8">
-                                <rect key="frame" x="72" y="118" width="270" height="142"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="PNj-PC-7zk" userLabel="BoxAnswer1">
+                                <rect key="frame" x="20" y="575" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxCorrectAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="PCF-h6-y7k" userLabel="BoxCorrectAnswer1">
+                                <rect key="frame" x="20" y="575" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxWrongAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="tFd-4Q-Rso" userLabel="BoxWrongAnswer1">
+                                <rect key="frame" x="20" y="575" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="y7u-J3-0I3" userLabel="BoxAnswer2">
+                                <rect key="frame" x="217" y="575" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxCorrectAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="HcZ-an-KIW" userLabel="BoxCorrectAnswer2">
+                                <rect key="frame" x="216" y="575" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxWrongAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="RsB-uD-PeN" userLabel="BoxWrongAnswer2">
+                                <rect key="frame" x="216" y="575" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="z9N-6i-NFZ" userLabel="BoxAnswer3">
+                                <rect key="frame" x="217" y="711" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxWrongAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-xN-7le" userLabel="BoxWrongAnswer3">
+                                <rect key="frame" x="217" y="711" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxCorrectAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="E9R-E0-f3i" userLabel="BoxCorrectAnswer3">
+                                <rect key="frame" x="217" y="711" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="WeQ-b4-xDP" userLabel="BoxAnswer4">
+                                <rect key="frame" x="20" y="711" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxCorrectAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-Za-Edi" userLabel="BoxCorrectAnswer4">
+                                <rect key="frame" x="19" y="711" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BoxWrongAnswer" translatesAutoresizingMaskIntoConstraints="NO" id="Aix-IX-uix" userLabel="BoxWrongAnswer4">
+                                <rect key="frame" x="19" y="711" width="177" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Box3" translatesAutoresizingMaskIntoConstraints="NO" id="ZT7-e5-to4">
+                                <rect key="frame" x="19" y="142" width="374" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiL-Se-YS8">
+                                <rect key="frame" x="72" y="268" width="270" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-dL-Tco">
-                                <rect key="frame" x="20" y="541.5" width="374" height="28.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Answer 1">
-                                            <attributes>
-                                                <font key="NSFont" metaFont="cellTitle"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="firstAnswerOnClick:" destination="Sny-Yx-Lw7" eventType="touchUpInside" id="O4V-Rj-tYH"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3R-Em-R1H">
-                                <rect key="frame" x="20" y="288" width="68" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3R-Em-R1H">
+                                <rect key="frame" x="20" y="471" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="difficulty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ0-IV-fkL">
-                                <rect key="frame" x="20" y="329" width="67" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="difficulty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ0-IV-fkL">
+                                <rect key="frame" x="20" y="512" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyI-YT-T5q">
-                                <rect key="frame" x="20" y="681" width="374" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyI-YT-T5q">
+                                <rect key="frame" x="30" y="730" width="156" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Answer 3"/>
                                 <connections>
                                     <action selector="thirdAnswerOnClick:" destination="Sny-Yx-Lw7" eventType="touchUpInside" id="k2x-vN-cEF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIX-LC-EqM">
-                                <rect key="frame" x="20" y="752" width="374" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-dL-Tco">
+                                <rect key="frame" x="30" y="599" width="156" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Answer 4"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Answer 1">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="fourthAnswerOnClick:" destination="Sny-Yx-Lw7" eventType="touchUpInside" id="fpD-kW-BnW"/>
+                                    <action selector="firstAnswerOnClick:" destination="Sny-Yx-Lw7" eventType="touchUpInside" id="O4V-Rj-tYH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfk-aA-UT1">
-                                <rect key="frame" x="20" y="610" width="374" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfk-aA-UT1">
+                                <rect key="frame" x="235" y="599" width="148" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Answer 2"/>
                                 <connections>
                                     <action selector="secondAnswerOnClick:" destination="Sny-Yx-Lw7" eventType="touchUpInside" id="6TC-R4-4xU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIX-LC-EqM">
+                                <rect key="frame" x="235" y="730" width="148" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Answer 4"/>
+                                <connections>
+                                    <action selector="fourthAnswerOnClick:" destination="Sny-Yx-Lw7" eventType="touchUpInside" id="fpD-kW-BnW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MMP-at-seg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="kyI-YT-T5q" firstAttribute="trailing" secondItem="GIX-LC-EqM" secondAttribute="trailing" id="1Si-0O-0C5"/>
-                            <constraint firstItem="Yfk-aA-UT1" firstAttribute="trailing" secondItem="kyI-YT-T5q" secondAttribute="trailing" id="DsG-lP-lBP"/>
-                            <constraint firstItem="o3R-Em-R1H" firstAttribute="leading" secondItem="MMP-at-seg" secondAttribute="leading" constant="20" id="KI6-nw-Tb1"/>
-                            <constraint firstItem="GIX-LC-EqM" firstAttribute="top" secondItem="kyI-YT-T5q" secondAttribute="bottom" constant="40" id="QZJ-TY-xe2"/>
-                            <constraint firstItem="o3R-Em-R1H" firstAttribute="top" secondItem="MMP-at-seg" secondAttribute="top" constant="200" id="SGF-Uk-B5h"/>
-                            <constraint firstItem="MMP-at-seg" firstAttribute="bottom" secondItem="GIX-LC-EqM" secondAttribute="bottom" constant="79" id="SLO-Hp-1O4"/>
-                            <constraint firstItem="Yfk-aA-UT1" firstAttribute="top" secondItem="Yoa-dL-Tco" secondAttribute="bottom" constant="40" id="Vib-js-k8R"/>
-                            <constraint firstItem="kyI-YT-T5q" firstAttribute="leading" secondItem="GIX-LC-EqM" secondAttribute="leading" id="XL6-6w-BGd"/>
-                            <constraint firstItem="uiL-Se-YS8" firstAttribute="leading" secondItem="MMP-at-seg" secondAttribute="leading" constant="72" id="XW3-9K-6fg"/>
-                            <constraint firstItem="iJ0-IV-fkL" firstAttribute="top" secondItem="o3R-Em-R1H" secondAttribute="bottom" constant="20" id="bCy-fm-0EB"/>
-                            <constraint firstItem="Yoa-dL-Tco" firstAttribute="leading" secondItem="Yfk-aA-UT1" secondAttribute="leading" id="bXp-id-fCx"/>
-                            <constraint firstItem="Yoa-dL-Tco" firstAttribute="trailing" secondItem="Yfk-aA-UT1" secondAttribute="trailing" id="cP7-b2-gGe"/>
-                            <constraint firstItem="uiL-Se-YS8" firstAttribute="top" secondItem="MMP-at-seg" secondAttribute="top" constant="30" id="dwi-P5-vjx"/>
-                            <constraint firstItem="iJ0-IV-fkL" firstAttribute="leading" secondItem="MMP-at-seg" secondAttribute="leading" constant="20" id="g0s-Cq-9gS"/>
-                            <constraint firstItem="Yoa-dL-Tco" firstAttribute="centerX" secondItem="uiL-Se-YS8" secondAttribute="centerX" id="ghN-JT-mjL"/>
-                            <constraint firstItem="Yoa-dL-Tco" firstAttribute="leading" secondItem="iJ0-IV-fkL" secondAttribute="leading" id="i4p-Wv-AmW"/>
-                            <constraint firstItem="Yoa-dL-Tco" firstAttribute="trailing" secondItem="4mb-pv-2cJ" secondAttribute="trailingMargin" id="iNQ-5q-ZVm"/>
-                            <constraint firstItem="kyI-YT-T5q" firstAttribute="top" secondItem="Yfk-aA-UT1" secondAttribute="bottom" constant="40" id="ijM-t6-JjA"/>
-                            <constraint firstItem="o3R-Em-R1H" firstAttribute="top" secondItem="uiL-Se-YS8" secondAttribute="bottom" constant="28" id="kex-bM-yGf"/>
-                            <constraint firstItem="Yfk-aA-UT1" firstAttribute="leading" secondItem="kyI-YT-T5q" secondAttribute="leading" id="uUB-4u-JVN"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Streak: 0" id="L35-Fs-Ow9"/>
                     <connections>
+                        <outlet property="boxAnswer2" destination="y7u-J3-0I3" id="B5e-71-GUw"/>
+                        <outlet property="boxAnswer3" destination="z9N-6i-NFZ" id="K9w-Bo-Qii"/>
+                        <outlet property="boxAnswer4" destination="WeQ-b4-xDP" id="mgo-yw-AAS"/>
+                        <outlet property="boxAnwer1" destination="PNj-PC-7zk" id="ZV8-kg-2AZ"/>
+                        <outlet property="boxCorrectAnswer1" destination="PCF-h6-y7k" id="vyz-Ta-dk7"/>
+                        <outlet property="boxCorrectAnswer2" destination="HcZ-an-KIW" id="9di-SU-ZPS"/>
+                        <outlet property="boxCorrectAnswer3" destination="E9R-E0-f3i" id="eJP-fd-RBS"/>
+                        <outlet property="boxCorrectAnswer4" destination="Lzq-Za-Edi" id="z21-Vt-AEa"/>
+                        <outlet property="boxWrongAnswer1" destination="tFd-4Q-Rso" id="pBx-2x-lBT"/>
+                        <outlet property="boxWrongAnswer2" destination="RsB-uD-PeN" id="CA9-Uf-dTa"/>
+                        <outlet property="boxWrongAnswer3" destination="XdN-xN-7le" id="9cb-ML-Ccs"/>
+                        <outlet property="boxWrongAnswer4" destination="Aix-IX-uix" id="wb3-IZ-kPN"/>
                         <outlet property="difficultyLabel" destination="iJ0-IV-fkL" id="xsv-dN-nnN"/>
                         <outlet property="firstAnswer" destination="Yoa-dL-Tco" id="bJY-Pi-Mn4"/>
                         <outlet property="fourthAnswer" destination="GIX-LC-EqM" id="7vL-qR-eTZ"/>
@@ -560,6 +603,9 @@
         <image name="Box1" width="966" height="477"/>
         <image name="Box2" width="440" height="441"/>
         <image name="Box3" width="966" height="603"/>
+        <image name="BoxAnswer" width="495" height="315"/>
+        <image name="BoxCorrectAnswer" width="496" height="315"/>
+        <image name="BoxWrongAnswer" width="495" height="316"/>
         <image name="Crown50PO" width="296" height="296"/>
         <image name="First50PO" width="296" height="296"/>
         <image name="Flame50PO" width="222" height="296"/>

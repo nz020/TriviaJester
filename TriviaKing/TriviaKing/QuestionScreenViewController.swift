@@ -9,6 +9,19 @@ import UIKit
 
 class QuestionScreenViewController: UIViewController {
     
+    @IBOutlet weak var boxAnwer1: UIImageView!
+    @IBOutlet weak var boxCorrectAnswer1: UIImageView!
+    @IBOutlet weak var boxWrongAnswer1: UIImageView!
+    @IBOutlet weak var boxAnswer2: UIImageView!
+    @IBOutlet weak var boxCorrectAnswer2: UIImageView!
+    @IBOutlet weak var boxWrongAnswer2: UIImageView!
+    @IBOutlet weak var boxAnswer3: UIImageView!
+    @IBOutlet weak var boxWrongAnswer3: UIImageView!
+    @IBOutlet weak var boxCorrectAnswer3: UIImageView!
+    @IBOutlet weak var boxAnswer4: UIImageView!
+    @IBOutlet weak var boxCorrectAnswer4: UIImageView!
+    @IBOutlet weak var boxWrongAnswer4: UIImageView!
+    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var difficultyLabel: UILabel!
     @IBOutlet weak var firstAnswer: UIButton!
@@ -24,12 +37,18 @@ class QuestionScreenViewController: UIViewController {
     var database: LocalStorageController?
     var selectedCategory: String? 
     
+    var isAnswerCorrect: Bool = false;
     var numberOfLives: Int = 3
     var currentQuestion: Int = 0
     var questions: [Question] = [Question]()
+    
+    var secondsBeforeNextQuestion: Int = 5
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hideBoxes()
+        
         database = LocalStorageController(delegate: appDelegate)
         
         print("Selected Category:", selectedCategory ?? "")
@@ -110,28 +129,40 @@ class QuestionScreenViewController: UIViewController {
         let buttonTitle = "\(sender.title(for: .normal) ?? "")"
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
-        getQuestion()
+        showCorrectAnswer()
+        
+        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(onTimerEnd), userInfo: nil, repeats: false)
+        //getQuestion()
     }
     
     @IBAction func secondAnswerOnClick(_ sender: UIButton) {
         let buttonTitle = "\(sender.title(for: .normal) ?? "")"
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
-        getQuestion()
+        showCorrectAnswer()
+        
+        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(onTimerEnd), userInfo: nil, repeats: false)
+        //getQuestion()
     }
     
     @IBAction func thirdAnswerOnClick(_ sender: UIButton) {
         let buttonTitle = "\(sender.title(for: .normal) ?? "")"
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
-        getQuestion()
+        showCorrectAnswer()
+        
+        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(onTimerEnd), userInfo: nil, repeats: false)
+        //getQuestion()
     }
     
     @IBAction func fourthAnswerOnClick(_ sender: UIButton) {
         let buttonTitle = "\(sender.title(for: .normal) ?? "")"
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
-        getQuestion()
+        showCorrectAnswer()
+        
+        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(onTimerEnd), userInfo: nil, repeats: false)
+        //getQuestion()
     }
     
     func checkCorrectAnswer (givenAnswer: String) {
@@ -142,12 +173,60 @@ class QuestionScreenViewController: UIViewController {
         print(clicked)
         
         if (clicked==correctAnswer) {
+            isAnswerCorrect = true
             print("Correct")
         }
         else {
             print("Wrong")
+            isAnswerCorrect = false
             numberOfLives -= 1
             checkGameOver()
+        }
+    }
+    
+    func showCorrectAnswer () {
+        let correctAnswer = questions[0].correct_answer.removingPercentEncoding ?? ""
+        var correctAnswerNumber: Int = 0
+        
+        if (correctAnswer == firstAnswer.titleLabel?.text) {
+            correctAnswerNumber = 1
+        }
+        else if (correctAnswer == secondAnswer.titleLabel?.text) {
+            correctAnswerNumber = 2
+        }
+        else if (correctAnswer == thirdAnswer.titleLabel?.text) {
+            correctAnswerNumber = 3
+        }
+        else if (correctAnswer == fourthAnswer.titleLabel?.text) {
+            correctAnswerNumber = 4
+        }
+        showCorrectBoxes(answerNumber: correctAnswerNumber)
+    }
+    
+    func showCorrectBoxes (answerNumber: Int) {
+        switch answerNumber {
+        case 1:
+            boxCorrectAnswer1.isHidden = false
+            boxWrongAnswer2.isHidden = false
+            boxWrongAnswer3.isHidden = false
+            boxWrongAnswer4.isHidden = false
+        case 2:
+            boxWrongAnswer1.isHidden = false
+            boxCorrectAnswer2.isHidden = false
+            boxWrongAnswer3.isHidden = false
+            boxWrongAnswer4.isHidden = false
+        case 3:
+            boxWrongAnswer1.isHidden = false
+            boxWrongAnswer2.isHidden = false
+            boxCorrectAnswer3.isHidden = false
+            boxWrongAnswer4.isHidden = false
+        case 4:
+            boxWrongAnswer1.isHidden = false
+            boxWrongAnswer2.isHidden = false
+            boxWrongAnswer3.isHidden = false
+            boxCorrectAnswer4.isHidden = false
+        default:
+            print("Could not show correct answers...")
         }
     }
     
@@ -157,6 +236,26 @@ class QuestionScreenViewController: UIViewController {
             _ = navigationController?.popToRootViewController(animated: true)
         }
     }
+    
+    @objc func onTimerEnd () {
+        getQuestion()
+        hideBoxes()
+    }
+    
+    func hideBoxes () {
+        boxWrongAnswer1.isHidden = true
+        boxCorrectAnswer1.isHidden = true
+        
+        boxWrongAnswer2.isHidden = true
+        boxCorrectAnswer2.isHidden = true
+        
+        boxWrongAnswer3.isHidden = true
+        boxCorrectAnswer3.isHidden = true
+        
+        boxWrongAnswer4.isHidden = true
+        boxCorrectAnswer4.isHidden = true
+    }
+    
     
     /*
     // MARK: - Navigation
