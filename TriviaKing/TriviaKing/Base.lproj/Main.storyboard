@@ -424,7 +424,7 @@
             </objects>
             <point key="canvasLocation" x="1739.1304347826087" y="68.973214285714278"/>
         </scene>
-        <!--Streak: 0-->
+        <!--Category-->
         <scene sceneID="omK-Wv-gmm">
             <objects>
                 <viewController id="Sny-Yx-Lw7" customClass="QuestionScreenViewController" customModule="TriviaKing" customModuleProvider="target" sceneMemberID="viewController">
@@ -551,7 +551,7 @@
                         <viewLayoutGuide key="safeArea" id="MMP-at-seg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Streak: 0" id="L35-Fs-Ow9"/>
+                    <navigationItem key="navigationItem" title="Category" id="L35-Fs-Ow9"/>
                     <connections>
                         <outlet property="boxAnswer2" destination="y7u-J3-0I3" id="B5e-71-GUw"/>
                         <outlet property="boxAnswer3" destination="z9N-6i-NFZ" id="K9w-Bo-Qii"/>

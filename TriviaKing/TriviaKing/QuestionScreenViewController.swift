@@ -43,6 +43,17 @@ class QuestionScreenViewController: UIViewController {
     var questions: [Question] = [Question]()
     
     var secondsBeforeNextQuestion: Int = 5
+    
+    var categories = ["General Knowledge": "9",
+                    "Books": "10",
+                    "Film/Movies": "11",
+                    "Music": "12",
+                    "Video Games": "15",
+                    "Computers": "18",
+                    "Sports": "21",
+                    "Celebrities": "26",
+                    "Comics": "29",
+                    "Anime/Manga": "31"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,7 +114,7 @@ class QuestionScreenViewController: UIViewController {
         questionLabel.text = questions[0].question.removingPercentEncoding
         difficultyLabel.text = questions[0].difficulty.removingPercentEncoding
         randomizePositionOfCorrectAnswer(correctAnswer: questions[0].correct_answer, wrongAnswers: questions[0].incorrect_answers)
-        self.title = "Streak: \(currentQuestion)"
+        self.title = "\(categories.someKey(forValue: selectedCategory ?? "0") ?? "Default Category")"
         overlay?.removeFromSuperview()
     }
     
