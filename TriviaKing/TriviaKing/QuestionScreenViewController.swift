@@ -65,6 +65,7 @@ class QuestionScreenViewController: UIViewController {
         
         database = LocalStorageController(delegate: appDelegate)
         numberofLivesLabel.text = "\(numberOfLives)"
+        streakLabel.text = "\(streak)"
         
         print("Selected Category:", selectedCategory ?? "")
         
@@ -108,7 +109,6 @@ class QuestionScreenViewController: UIViewController {
             DispatchQueue.main.async {
                 self.questions = result!
                 self.updateView()
-                self.streak += 1
             }
             
         }
@@ -116,10 +116,20 @@ class QuestionScreenViewController: UIViewController {
     
     func updateView() {
         questionLabel.text = questions[0].question.removingPercentEncoding
-        difficultyLabel.text = questions[0].difficulty.removingPercentEncoding
+        difficultyLabel.text = questions[0].difficulty.removingPercentEncoding?.firstUppercased
         randomizePositionOfCorrectAnswer(correctAnswer: questions[0].correct_answer, wrongAnswers: questions[0].incorrect_answers)
         self.title = "\(OTDBAPIController.catDict.someKey(forValue: selectedCategory ?? "0") ?? "Default Category")"
         overlay?.removeFromSuperview()
+        switch questions[0].difficulty {
+        case "easy":
+            pointsLabel.text = "+1"
+        case "medium":
+            pointsLabel.text = "+2"
+        case "hard":
+            pointsLabel.text = "+3"
+        default:
+            pointsLabel.text = "+1"
+        }
     }
     
     func randomizePositionOfCorrectAnswer(correctAnswer: String, wrongAnswers: [String]) {
@@ -189,6 +199,17 @@ class QuestionScreenViewController: UIViewController {
         
         if (clicked==correctAnswer) {
             isAnswerCorrect = true
+            switch questions[0].difficulty {
+            case "easy":
+                streak += 1
+            case "medium":
+                streak += 2
+            case "hard":
+                streak += 3
+            default:
+                streak += 1
+            }
+            streakLabel.text = "\(streak)"
             print("Correct")
         }
         else {
@@ -288,4 +309,8 @@ extension Dictionary where Value: Equatable {
     func someKey(forValue val: Value) -> Key? {
         return first(where: { $1 == val })?.key
     }
+}
+extension StringProtocol {
+    var firstUppercased: String { return prefix(1).uppercased() + dropFirst() }
+    var firstCapitalized: String { return prefix(1).capitalized + dropFirst() }
 }
