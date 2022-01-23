@@ -118,7 +118,7 @@ class QuestionScreenViewController: UIViewController {
         questionLabel.text = questions[0].question.removingPercentEncoding
         difficultyLabel.text = questions[0].difficulty.removingPercentEncoding
         randomizePositionOfCorrectAnswer(correctAnswer: questions[0].correct_answer, wrongAnswers: questions[0].incorrect_answers)
-        self.title = "\(categories.someKey(forValue: selectedCategory ?? "0") ?? "Default Category")"
+        self.title = "\(OTDBAPIController.catDict.someKey(forValue: selectedCategory ?? "0") ?? "Default Category")"
         overlay?.removeFromSuperview()
     }
     

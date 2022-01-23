@@ -12,17 +12,7 @@ class CategoryScreenViewController: UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!
     let font = UIFont(name: "Hey Comic", size: 24)
     
-    var categories = ["General Knowledge": "9",
-                    "Books": "10",
-                    "Film/Movies": "11",
-                    "Music": "12",
-                    "Video Games": "15",
-                    "Computers": "18",
-                    "Sports": "21",
-                    "Celebrities": "26",
-                    "Comics": "29",
-                    "Anime/Manga": "31"]
-    
+    let categories = OTDBAPIController.catDict
     var selectedCategory: String?
     
     @IBOutlet weak var Category1ButtonOutlet: UIButton!
