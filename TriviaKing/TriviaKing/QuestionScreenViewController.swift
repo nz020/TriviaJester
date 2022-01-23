@@ -43,20 +43,11 @@ class QuestionScreenViewController: UIViewController {
     var isAnswerCorrect: Bool = false;
     var numberOfLives: Int = 3
     var streak: Int = 0
+    var correctAnswers: Int = 0
     var questions: [Question] = [Question]()
+    var correctIndex: Int?
     
     var secondsBeforeNextQuestion: Int = 5
-    
-    var categories = ["General Knowledge": "9",
-                    "Books": "10",
-                    "Film/Movies": "11",
-                    "Music": "12",
-                    "Video Games": "15",
-                    "Computers": "18",
-                    "Sports": "21",
-                    "Celebrities": "26",
-                    "Comics": "29",
-                    "Anime/Manga": "31"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +86,7 @@ class QuestionScreenViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         print(OTDBAPIController.catDict.someKey(forValue: selectedCategory!)!)
-        database?.saveCategory(category: OTDBAPIController.catDict.someKey(forValue: selectedCategory!)!, correctAnswers: (streak - 3 + numberOfLives), wrongAnswers: (-1 * (numberOfLives-3)), streak: streak - 3 + numberOfLives)
+        database?.saveCategory(category: OTDBAPIController.catDict.someKey(forValue: selectedCategory!)!, correctAnswers: correctAnswers, wrongAnswers: (-1 * (numberOfLives-3)), streak: streak)
     }
     
     func getQuestion() {
@@ -137,6 +128,8 @@ class QuestionScreenViewController: UIViewController {
         var answersArray: [String] = [correctAnswer] + wrongAnswers;
         answersArray.shuffle()
         
+        correctIndex = (answersArray.firstIndex(of: correctAnswer) ?? 0) + 1
+        
         self.firstAnswer.setTitle(answersArray[0].removingPercentEncoding, for: .normal)
         self.firstAnswer.setAttributedTitle(NSAttributedString(string: answersArray[0].removingPercentEncoding!, attributes: [NSAttributedString.Key.font: font!]), for: .normal)
         self.secondAnswer.setTitle(answersArray[1].removingPercentEncoding, for: .normal)
@@ -154,7 +147,8 @@ class QuestionScreenViewController: UIViewController {
         let buttonTitle = "\(sender.title(for: .normal) ?? "")"
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
-        showCorrectAnswer()
+        showCorrectBoxes(answerNumber: correctIndex ?? 0)
+
         
         Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(onTimerEnd), userInfo: nil, repeats: false)
         //getQuestion()
@@ -164,8 +158,8 @@ class QuestionScreenViewController: UIViewController {
         let buttonTitle = "\(sender.title(for: .normal) ?? "")"
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
-        showCorrectAnswer()
-        
+        showCorrectBoxes(answerNumber: correctIndex ?? 0)
+
         Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(onTimerEnd), userInfo: nil, repeats: false)
         //getQuestion()
     }
@@ -174,8 +168,8 @@ class QuestionScreenViewController: UIViewController {
         let buttonTitle = "\(sender.title(for: .normal) ?? "")"
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
-        showCorrectAnswer()
-        
+        showCorrectBoxes(answerNumber: correctIndex ?? 0)
+
         Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(onTimerEnd), userInfo: nil, repeats: false)
         //getQuestion()
     }
@@ -184,8 +178,8 @@ class QuestionScreenViewController: UIViewController {
         let buttonTitle = "\(sender.title(for: .normal) ?? "")"
         
         checkCorrectAnswer(givenAnswer: buttonTitle)
-        showCorrectAnswer()
-        
+        showCorrectBoxes(answerNumber: correctIndex ?? 0)
+
         Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(onTimerEnd), userInfo: nil, repeats: false)
         //getQuestion()
     }
@@ -199,6 +193,7 @@ class QuestionScreenViewController: UIViewController {
         
         if (clicked==correctAnswer) {
             isAnswerCorrect = true
+            correctAnswers += 1
             switch questions[0].difficulty {
             case "easy":
                 streak += 1
@@ -219,25 +214,6 @@ class QuestionScreenViewController: UIViewController {
             numberofLivesLabel.text = "\(numberOfLives)"
             checkGameOver()
         }
-    }
-    
-    func showCorrectAnswer () {
-        let correctAnswer = questions[0].correct_answer.removingPercentEncoding ?? ""
-        var correctAnswerNumber: Int = 0
-        
-        if (correctAnswer == firstAnswer.titleLabel?.text) {
-            correctAnswerNumber = 1
-        }
-        else if (correctAnswer == secondAnswer.titleLabel?.text) {
-            correctAnswerNumber = 2
-        }
-        else if (correctAnswer == thirdAnswer.titleLabel?.text) {
-            correctAnswerNumber = 3
-        }
-        else if (correctAnswer == fourthAnswer.titleLabel?.text) {
-            correctAnswerNumber = 4
-        }
-        showCorrectBoxes(answerNumber: correctAnswerNumber)
     }
     
     func showCorrectBoxes (answerNumber: Int) {
