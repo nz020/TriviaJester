@@ -22,6 +22,9 @@ class QuestionScreenViewController: UIViewController {
     @IBOutlet weak var boxCorrectAnswer4: UIImageView!
     @IBOutlet weak var boxWrongAnswer4: UIImageView!
     
+    @IBOutlet weak var numberofLivesLabel: UILabel!
+    @IBOutlet weak var streakLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var difficultyLabel: UILabel!
     @IBOutlet weak var firstAnswer: UIButton!
@@ -61,6 +64,7 @@ class QuestionScreenViewController: UIViewController {
         hideBoxes()
         
         database = LocalStorageController(delegate: appDelegate)
+        numberofLivesLabel.text = "\(numberOfLives)"
         
         print("Selected Category:", selectedCategory ?? "")
         
@@ -191,6 +195,7 @@ class QuestionScreenViewController: UIViewController {
             print("Wrong")
             isAnswerCorrect = false
             numberOfLives -= 1
+            numberofLivesLabel.text = "\(numberOfLives)"
             checkGameOver()
         }
     }

@@ -485,27 +485,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Box3" translatesAutoresizingMaskIntoConstraints="NO" id="ZT7-e5-to4">
-                                <rect key="frame" x="19" y="142" width="374" height="343"/>
+                                <rect key="frame" x="20" y="206" width="374" height="343"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiL-Se-YS8">
-                                <rect key="frame" x="72" y="268" width="270" height="142"/>
+                                <rect key="frame" x="72" y="306" width="270" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3R-Em-R1H">
-                                <rect key="frame" x="20" y="471" width="68" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="difficulty:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ0-IV-fkL">
+                                <rect key="frame" x="20" y="497" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="difficulty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ0-IV-fkL">
-                                <rect key="frame" x="20" y="512" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -547,6 +540,35 @@
                                     <action selector="fourthAnswerOnClick:" destination="Sny-Yx-Lw7" eventType="touchUpInside" id="fpD-kW-BnW"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FlameWBorder" translatesAutoresizingMaskIntoConstraints="NO" id="4gB-dZ-ivc">
+                                <rect key="frame" x="20" y="156" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="USz-P8-k33">
+                                <rect key="frame" x="313" y="156" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Su3-k8-QI4">
+                                <rect key="frame" x="94" y="156" width="57" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHu-7o-qkH">
+                                <rect key="frame" x="339" y="156" width="29" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cW-8o-dAC">
+                                <rect key="frame" x="368" y="497" width="25" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MMP-at-seg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -568,8 +590,11 @@
                         <outlet property="difficultyLabel" destination="iJ0-IV-fkL" id="xsv-dN-nnN"/>
                         <outlet property="firstAnswer" destination="Yoa-dL-Tco" id="bJY-Pi-Mn4"/>
                         <outlet property="fourthAnswer" destination="GIX-LC-EqM" id="7vL-qR-eTZ"/>
+                        <outlet property="numberofLivesLabel" destination="lHu-7o-qkH" id="I0i-q1-k94"/>
+                        <outlet property="pointsLabel" destination="4cW-8o-dAC" id="9ce-F2-UhV"/>
                         <outlet property="questionLabel" destination="uiL-Se-YS8" id="5BC-Md-Vc0"/>
                         <outlet property="secondAnswer" destination="Yfk-aA-UT1" id="PLL-Z7-kDm"/>
+                        <outlet property="streakLabel" destination="Su3-k8-QI4" id="AV6-pR-UNd"/>
                         <outlet property="thirdAnswer" destination="kyI-YT-T5q" id="H2f-37-0fO"/>
                     </connections>
                 </viewController>
@@ -609,6 +634,8 @@
         <image name="Crown50PO" width="296" height="296"/>
         <image name="First50PO" width="296" height="296"/>
         <image name="Flame50PO" width="222" height="296"/>
+        <image name="FlameWBorder" width="186" height="247"/>
+        <image name="Heart" width="273" height="274"/>
         <image name="JesterIcon" width="826" height="1043"/>
         <image name="PlayButton" width="295.33334350585938" height="100.66666412353516"/>
         <image name="StatsButton" width="295.33334350585938" height="100.66666412353516"/>
