@@ -156,6 +156,7 @@ class QuestionScreenViewController: UIViewController {
 
         
         Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(onTimerEnd), userInfo: nil, repeats: false)
+        disableButtons()
         //getQuestion()
     }
     
@@ -166,6 +167,7 @@ class QuestionScreenViewController: UIViewController {
         showCorrectBoxes(answerNumber: correctIndex ?? 0)
 
         Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(onTimerEnd), userInfo: nil, repeats: false)
+        disableButtons()
         //getQuestion()
     }
     
@@ -176,6 +178,7 @@ class QuestionScreenViewController: UIViewController {
         showCorrectBoxes(answerNumber: correctIndex ?? 0)
 
         Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(onTimerEnd), userInfo: nil, repeats: false)
+        disableButtons()
         //getQuestion()
     }
     
@@ -186,6 +189,7 @@ class QuestionScreenViewController: UIViewController {
         showCorrectBoxes(answerNumber: correctIndex ?? 0)
 
         Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(onTimerEnd), userInfo: nil, repeats: false)
+        disableButtons()
         //getQuestion()
     }
     
@@ -272,6 +276,7 @@ class QuestionScreenViewController: UIViewController {
     @objc func onTimerEnd () {
         getQuestion()
         hideBoxes()
+        enableButtons()
     }
     
     func hideBoxes () {
@@ -297,6 +302,20 @@ class QuestionScreenViewController: UIViewController {
         animation.toValue = NSValue(cgPoint: CGPoint(x: self.view.center.x + 10, y: self.view.center.y))
         
         self.view.layer.add(animation, forKey: "position")
+    }
+    
+    func disableButtons() {
+        firstAnswer.isEnabled = false
+        secondAnswer.isEnabled = false
+        thirdAnswer.isEnabled = false
+        fourthAnswer.isEnabled = false
+    }
+    
+    func enableButtons() {
+        firstAnswer.isEnabled = true
+        secondAnswer.isEnabled = true
+        thirdAnswer.isEnabled = true
+        fourthAnswer.isEnabled = true
     }
     
     
