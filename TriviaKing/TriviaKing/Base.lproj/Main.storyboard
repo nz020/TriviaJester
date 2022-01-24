@@ -571,6 +571,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxz-fM-35O" userLabel="FeedBackLabel">
+                                <rect key="frame" x="126" y="517" width="162" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MMP-at-seg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -671,6 +678,7 @@
                         <outlet property="boxWrongAnswer3" destination="XdN-xN-7le" id="9cb-ML-Ccs"/>
                         <outlet property="boxWrongAnswer4" destination="Aix-IX-uix" id="wb3-IZ-kPN"/>
                         <outlet property="difficultyLabel" destination="iJ0-IV-fkL" id="xsv-dN-nnN"/>
+                        <outlet property="feedBackLabel" destination="Gxz-fM-35O" id="a9S-E9-XKp"/>
                         <outlet property="firstAnswer" destination="Yoa-dL-Tco" id="bJY-Pi-Mn4"/>
                         <outlet property="fourthAnswer" destination="GIX-LC-EqM" id="7vL-qR-eTZ"/>
                         <outlet property="numberofLivesLabel" destination="lHu-7o-qkH" id="I0i-q1-k94"/>

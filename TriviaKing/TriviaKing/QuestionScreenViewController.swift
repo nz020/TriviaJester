@@ -22,6 +22,7 @@ class QuestionScreenViewController: UIViewController {
     @IBOutlet weak var boxCorrectAnswer4: UIImageView!
     @IBOutlet weak var boxWrongAnswer4: UIImageView!
     
+    @IBOutlet weak var feedBackLabel: UILabel!
     @IBOutlet weak var numberofLivesLabel: UILabel!
     @IBOutlet weak var streakLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
@@ -109,6 +110,7 @@ class QuestionScreenViewController: UIViewController {
     }
     
     func updateView() {
+        feedBackLabel.isHidden = true
         questionLabel.text = questions[0].question.removingPercentEncoding
         difficultyLabel.text = questions[0].difficulty.removingPercentEncoding?.firstUppercased
         randomizePositionOfCorrectAnswer(correctAnswer: questions[0].correct_answer, wrongAnswers: questions[0].incorrect_answers)
@@ -196,6 +198,8 @@ class QuestionScreenViewController: UIViewController {
         
         if (clicked==correctAnswer) {
             isAnswerCorrect = true
+            feedBackLabel.text = "DING DONG"
+            feedBackLabel.textColor = UIColor.green
             correctAnswers += 1
             switch questions[0].difficulty {
             case "easy":
@@ -213,10 +217,14 @@ class QuestionScreenViewController: UIViewController {
         else {
             print("Wrong")
             isAnswerCorrect = false
+            screenShake()
+            feedBackLabel.text = "SO BAD XD"
+            feedBackLabel.textColor = UIColor.red
             numberOfLives -= 1
             numberofLivesLabel.text = "\(numberOfLives)"
             checkGameOver()
         }
+        feedBackLabel.isHidden = false
     }
     
     func showCorrectBoxes (answerNumber: Int) {
@@ -248,8 +256,16 @@ class QuestionScreenViewController: UIViewController {
     
     func checkGameOver () {
         if (numberOfLives < 1) {
-            print("You Lost")
-            _ = navigationController?.popToRootViewController(animated: true)
+            print("Game Over")
+            let alert = UIAlertController(title: "Game Over", message: "You scored \(streak) Points", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK :(", style: .default, handler: {
+                (action) -> Void in
+                print ("ok :( Button tapped")
+                self.navigationController?.popToRootViewController(animated: true)
+                //_ = navigationController?.popToRootViewController(animated: true)
+
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -270,6 +286,17 @@ class QuestionScreenViewController: UIViewController {
         
         boxWrongAnswer4.isHidden = true
         boxCorrectAnswer4.isHidden = true
+    }
+    
+    func screenShake() {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.07
+        animation.repeatCount = 4
+        animation.autoreverses = true
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: self.view.center.x - 10, y: self.view.center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: self.view.center.x + 10, y: self.view.center.y))
+        
+        self.view.layer.add(animation, forKey: "position")
     }
     
     
